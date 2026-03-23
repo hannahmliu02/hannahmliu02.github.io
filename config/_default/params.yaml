@@ -37,7 +37,7 @@ hugoblox:
     pack: "default"
     # Optional: Override theme pack colors
     colors:
-      primary: "#3d5080"                # Warm navy (slight indigo tone)
+      primary: "#1e2f5e"                # Dark navy blue
       secondary: "#64748b"              # Slate gray
       neutral: "slate"                  # Affects gray utilities (text-gray-*, bg-gray-*)
     # Optional: Mode-specific color overrides
