@@ -20,22 +20,23 @@ links:
     url: mailto:hannah.liu25@imperial.ac.uk
     label: E-mail Me
   - icon: academicons/google-scholar
-    url: https://scholar.google.com
+    url: https://scholar.google.com/citations?hl=en&user=VqE_eFIAAAAJ&view_op=list_works&gmla=AEk_c1tu6D4hqS7bgl44aeCVFK_XjvBRFjMsquMTFsp9rYCiQap27uXmzbEghon-sP9u3TFmvmbJvzNLUceMmdHS
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/yourprofile
+    url: https://www.linkedin.com/in/hannah-liu-981b33208/
 
 interests:
   - AI Governance
-  - Regulation & Policy
   - AI Safety
-  - Algorithmic Accountability
+  - AI Ethics
+  - Sociotechnical Applications
+  - Bias Mitigation
+  - Large Language Models (LLMs)
+  - Causal RLHF
+  - Fine-Tuning Methodologies
+  - Intersection between AI applications and various fields (medical, financial, psychology, etc.)
 
 education:
   - degree: MSc in AI Applications and Innovation
     institution: Imperial College London
-    start: 2025-09-01
-    end: 2026-09-01
   - degree: BA in Cognitive Science
     institution: University of Pennsylvania
-    start: 2021-09-01
-    end: 2025-05-31
