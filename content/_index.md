@@ -20,9 +20,9 @@ sections:
         text: Download CV
         url: uploads/resume.pdf
       headings:
-        about: ''
+        about: 'About Me'
         education: ''
-        interests: ''
+        interests: 'Academic Interests'
     design:
       background:
         gradient_mesh:
@@ -36,14 +36,4 @@ sections:
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
-  - block: markdown
-    content:
-      title: 'My Research'
-      subtitle: ''
-      text: |-
-        I research the governance of artificial intelligence, with a focus on regulatory frameworks, international AI policy, and algorithmic accountability. My work sits at the intersection of law, political science, and machine learning.
-
-        Please reach out to collaborate!
-    design:
-      columns: '1'
 ---
