@@ -7,15 +7,9 @@ main:
   - name: Bio
     url: /
     weight: 10
-  - name: Papers
-    url: /#papers
-    weight: 11
   - name: Experience
     url: experience/
     weight: 20
   - name: Projects
     url: projects/
     weight: 30
-  - name: Courses
-    url: courses/
-    weight: 40
