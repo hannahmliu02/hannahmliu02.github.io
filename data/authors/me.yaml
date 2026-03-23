@@ -23,6 +23,9 @@ links:
     url: https://scholar.google.com/citations?hl=en&user=VqE_eFIAAAAJ&view_op=list_works&gmla=AEk_c1tu6D4hqS7bgl44aeCVFK_XjvBRFjMsquMTFsp9rYCiQap27uXmzbEghon-sP9u3TFmvmbJvzNLUceMmdHS
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/hannah-liu-981b33208/
+  - icon: hero/document-text
+    url: uploads/resume.pdf
+    label: CV
 
 interests:
   - AI Governance
