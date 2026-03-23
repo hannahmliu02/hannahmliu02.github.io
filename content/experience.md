@@ -4,22 +4,22 @@ date: 2023-10-24
 type: landing
 
 design:
-  spacing: '1rem'
+  spacing: '0.25rem'
 
 sections:
   - block: markdown
     content:
-      title: Professional Experience
+      title: Current Professional Role
       text: |-
-        **Position Title** | Organization | Date Range
-        - Description of role and responsibilities
+        **Research Engineer in AI Policy and Governance** | Responsible AI Institute | January 2026 - Present
+        - Building a risk classification and policy generation tool for agentic AI systems; creating both the theoretical and technical backends for AI governance mechanisms
 
   - block: markdown
     content:
-      title: Academic Experience
+      title: Current Academic Role
       text: |-
-        **Position Title** | Institution | Date Range
-        - Description of role and responsibilities
+        **Visiting Master's Researcher** | University of Cambridge | October 2025 - Present
+        - Analysing the effects of fine-tuning methodologies on AI bias guardrails in LLMs; in collaboration with **Noah Broestl**, under the supervision of **Dr. Umang Bhatt**
 
   - block: resume-skills
     content:
@@ -34,6 +34,12 @@ sections:
   - block: markdown
     content:
       title: In my free time, I like to...
-      text: |-
-        Swim (former NCAA D1 Athlete) · Listen to music · Make films · Write · Wander
+      text: |
+        <div class="flex flex-wrap gap-2">
+          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Swim (former NCAA D1 Athlete)</span>
+          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Listen to music</span>
+          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Make films</span>
+          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Write</span>
+          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Wander</span>
+        </div>
 ---

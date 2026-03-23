@@ -3,6 +3,18 @@
   text-align: center;
 }
 
+/* Darker blue for light-blue text elements */
+a, .text-primary-400, .text-primary-300, .text-blue-400, .text-blue-300 {
+  color: #1e2f5e !important;
+}
+
+/* More space between skill label and level bar */
+.resume-skills .skill-item,
+.resume-skills li {
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
 /* Tooltips on social icon buttons */
 a[aria-label]:hover::after {
   content: attr(aria-label);
