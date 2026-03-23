@@ -44,24 +44,38 @@ skills:
   - name: Technical
     items:
       - label: Python
+        level: 5
       - label: Java + JUnit
+        level: 5
       - label: Machine Learning
+        level: 4
       - label: Deep Learning
+        level: 4
       - label: MatLab
+        level: 3
       - label: R
+        level: 3
   - name: Languages
     items:
       - label: English (native)
+        level: 5
       - label: Chinese (fluent)
+        level: 5
       - label: Spanish (learning!)
+        level: 2
       - label: Japanese (learning!)
-  - name: In my free time, I like to...
-    items: 
-      - label: Swim (former NCAA D1 Athlete)
-      - label: Listen to music
-      - label: Make films
-      - label: Write
-      - label: Wander
+        level: 1
+awards:
+  - title: Phi Beta Kappa Inductee
+    awarder: Phi Beta Kappa
+    date: "2025-05"
+    summary: Top 8% of UPenn's graduating class of 2025
+    icon: hero/trophy
+    - title: Rhodes Scholarship Nominee
+    awarder: University of Pennsylvania
+    date: "2025-08, 2024-08"
+    summary: Endorsed by UPenn to move forward in the Rhodes Scholarship process
+    icon: hero/trophy
 
 education:
   - degree: MSc in AI Applications and Innovation

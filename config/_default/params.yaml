@@ -38,8 +38,8 @@ hugoblox:
     # Optional: Override theme pack colors
     colors:
       primary: "#1e2f5e"                # Dark navy blue
-      secondary: "#64748b"              # Slate gray
-      neutral: "slate"                  # Affects gray utilities (text-gray-*, bg-gray-*)
+      secondary: "#3b5ea6"              # Medium blue
+      neutral: "blue"                   # Affects gray utilities (text-gray-*, bg-gray-*)
     # Optional: Mode-specific color overrides
     colors_light: {}
     colors_dark: {}
