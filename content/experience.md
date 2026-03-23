@@ -22,28 +22,30 @@ sections:
 
         **Visiting Master's Researcher** | University of Cambridge | October 2025 – Present
         - Analysing the effects of fine-tuning methodologies on AI bias guardrails in LLMs; in collaboration with **Noah Broestl**, under the supervision of **Dr. Umang Bhatt**
+    design:
+      background:
+        gradient_mesh:
+          enable: true
 
-        ---
+  - block: resume-skills
+    content:
+      title: Skills
+      username: me
 
-        ## Skills
+  - block: resume-awards
+    content:
+      title: Awards
+      username: me
 
-        **Technical** · Python · Java + JUnit · Machine Learning · Deep Learning · MatLab · R
-
-        **Languages** · English (native) · Chinese (fluent) · Spanish (learning) · Japanese (learning)
-
-        ---
-
-        ## Awards
-
-        **Phi Beta Kappa Inductee** | Phi Beta Kappa | May 2025
-        Top 8% of UPenn's graduating class of 2025
-
-        **Rhodes Scholarship Nominee** | University of Pennsylvania | August 2024, August 2025
-        Endorsed by UPenn to move forward in the Rhodes Scholarship process
-
-        ---
-
-        ## In my free time, I like to...
-
-        Swim (former NCAA D1 Athlete) · Listen to music · Make films · Write · Wander
+  - block: markdown
+    content:
+      title: In my free time, I like to...
+      text: |
+        <div class="flex flex-wrap gap-2">
+          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Swim (former NCAA D1 Athlete)</span>
+          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Listen to music</span>
+          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Make films</span>
+          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Write</span>
+          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Wander</span>
+        </div>
 ---

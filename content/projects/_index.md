@@ -11,6 +11,10 @@ sections:
     content:
       title: Projects
       text: ''
+    design:
+      background:
+        gradient_mesh:
+          enable: true
 
   - block: markdown
     content:

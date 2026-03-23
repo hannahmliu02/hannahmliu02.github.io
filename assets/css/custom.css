@@ -1,9 +1,3 @@
-/* Global gradient background across all pages */
-body {
-  background: linear-gradient(135deg, #1e2f5e 0%, #3b5ea6 50%, #64748b 100%) fixed;
-  min-height: 100vh;
-}
-
 /* Center skills section */
 .resume-skills {
   text-align: center;
