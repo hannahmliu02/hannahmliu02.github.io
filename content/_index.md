@@ -24,10 +24,8 @@ sections:
         education: ''
         interests: ''
     design:
-      # Use the new Gradient Mesh which automatically adapts to the selected theme colors
       background:
-        gradient_mesh:
-          enable: true
+        color: "#4a6fa5"
 
       # Name heading sizing to accommodate long or short names
       name:
