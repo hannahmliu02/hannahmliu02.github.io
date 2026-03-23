@@ -38,6 +38,29 @@ interests:
   - Fine-Tuning Methodologies
   - Intersection between AI applications and various fields (medical, financial, psychology, etc.)
 
+skills:
+  - name: Technical
+    items:
+      - label: Python
+      - label: Java + JUnit
+      - label: Machine Learning
+      - label: Deep Learning
+      - label: MatLab
+      - label: R
+  - name: Languages
+    items:
+      - label: English (native)
+      - label: Chinese (fluent)
+      - label: Spanish (learning!)
+      - label: Japanese (learning!)
+  - name: In my free time, I like to...
+    items: 
+      - label: Swim (former NCAA D1 Athlete)
+      - label: Listen to music
+      - label: Make films
+      - label: Write
+      - label: Wander
+
 education:
   - degree: MSc in AI Applications and Innovation
     institution: Imperial College London
