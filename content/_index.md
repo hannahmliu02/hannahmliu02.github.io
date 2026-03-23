@@ -25,7 +25,8 @@ sections:
         interests: ''
     design:
       background:
-        color: "#4a6fa5"
+        gradient_mesh:
+          enable: true
 
       # Name heading sizing to accommodate long or short names
       name:
