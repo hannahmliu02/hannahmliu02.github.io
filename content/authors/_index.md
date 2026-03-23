@@ -1,19 +1,18 @@
 ---
----
 title: Hannah Liu
 role: MSc Student in AI Applications and Innovation
+
 organizations:
   - name: Imperial College London
     url: ""
 
-bio: I research the governance of artificial intelligence, with a focus on [your area — e.g. regulatory frameworks, international AI policy]. My work sits at the intersection of [e.g. law, political science, and machine learning].
+bio: I research the governance of artificial intelligence, with a focus on regulatory frameworks, international AI policy, and algorithmic accountability. My work sits at the intersection of law, political science, and machine learning.
 
 interests:
   - AI Governance
   - Regulation & Policy
   - AI Safety
   - Algorithmic Accountability
-  - [Add your own]
 
 education:
   courses:
@@ -30,11 +29,10 @@ social:
     link: mailto:hannah.liu25@imperial.ac.uk
   - icon: google-scholar
     icon_pack: ai
-    link: [https://scholar.google.com](https://scholar.google.com/citations?view_op=list_works&hl=en&user=VqE_eFIAAAAJ)
+    link: https://scholar.google.com
   - icon: linkedin
     icon_pack: fab
-    link: [https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/hannah-liu-981b33208/)
+    link: https://linkedin.com/in/yourprofile
 
 superuser: true
----
 ---
