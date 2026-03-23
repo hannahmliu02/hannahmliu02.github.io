@@ -1,12 +1,19 @@
+/* Global gradient background across all pages */
+body {
+  background: linear-gradient(135deg, #1e2f5e 0%, #3b5ea6 50%, #64748b 100%) fixed;
+  min-height: 100vh;
+}
+
 /* Center skills section */
 .resume-skills {
   text-align: center;
 }
 
-/* Darker blue for light-blue text elements */
-a, .text-primary-400, .text-primary-300, .text-blue-400, .text-blue-300 {
-  color: #1e2f5e !important;
+/* Dark text for light-blue elements on bio page */
+.text-primary-400, .text-primary-300, .text-blue-400, .text-blue-300 {
+  color: #111111 !important;
 }
+
 
 /* More space between skill label and level bar */
 .resume-skills .skill-item,

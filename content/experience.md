@@ -4,42 +4,46 @@ date: 2023-10-24
 type: landing
 
 design:
-  spacing: '0.25rem'
+  spacing: '2rem'
 
 sections:
   - block: markdown
     content:
-      title: Current Professional Role
+      title: ''
       text: |-
-        **Research Engineer in AI Policy and Governance** | Responsible AI Institute | January 2026 - Present
+        ## Professional
+
+        **Research Engineer in AI Policy and Governance** | Responsible AI Institute | January 2026 – Present
         - Building a risk classification and policy generation tool for agentic AI systems; creating both the theoretical and technical backends for AI governance mechanisms
 
-  - block: markdown
-    content:
-      title: Current Academic Role
-      text: |-
-        **Visiting Master's Researcher** | University of Cambridge | October 2025 - Present
+        ---
+
+        ## Academic
+
+        **Visiting Master's Researcher** | University of Cambridge | October 2025 – Present
         - Analysing the effects of fine-tuning methodologies on AI bias guardrails in LLMs; in collaboration with **Noah Broestl**, under the supervision of **Dr. Umang Bhatt**
 
-  - block: resume-skills
-    content:
-      title: Skills
-      username: me
+        ---
 
-  - block: resume-awards
-    content:
-      title: Awards
-      username: me
+        ## Skills
 
-  - block: markdown
-    content:
-      title: In my free time, I like to...
-      text: |
-        <div class="flex flex-wrap gap-2">
-          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Swim (former NCAA D1 Athlete)</span>
-          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Listen to music</span>
-          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Make films</span>
-          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Write</span>
-          <span class="rounded-full bg-primary-100 dark:bg-primary-900 px-3 py-1 text-xs text-primary-800 dark:text-primary-200">Wander</span>
-        </div>
+        **Technical** · Python · Java + JUnit · Machine Learning · Deep Learning · MatLab · R
+
+        **Languages** · English (native) · Chinese (fluent) · Spanish (learning) · Japanese (learning)
+
+        ---
+
+        ## Awards
+
+        **Phi Beta Kappa Inductee** | Phi Beta Kappa | May 2025
+        Top 8% of UPenn's graduating class of 2025
+
+        **Rhodes Scholarship Nominee** | University of Pennsylvania | August 2024, August 2025
+        Endorsed by UPenn to move forward in the Rhodes Scholarship process
+
+        ---
+
+        ## In my free time, I like to...
+
+        Swim (former NCAA D1 Athlete) · Listen to music · Make films · Write · Wander
 ---
