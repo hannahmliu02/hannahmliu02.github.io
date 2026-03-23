@@ -6,13 +6,18 @@ organizations:
   - name: Imperial College London
     url: ""
 
-bio: I research the governance of artificial intelligence, with a focus on regulatory frameworks, international AI policy, and algorithmic accountability. My work sits at the intersection of law, political science, and machine learning.
+bio: My research and professional work primarily focuses on creating the mechanisms required to build globally applicable, ethically adequate, and decentralised AI governance frameworks. I use my background in cognitive science and computation to answer sociotechnical questions about AI applications, deriving insights from fields such as psychology, neuroscience, linguistics, and philosophy to better inform approaches to computational problems. I also analyse how we can best integrate AI applications into society without causing harm to underrepresented populations. 
 
 interests:
   - AI Governance
-  - Regulation & Policy
   - AI Safety
-  - Algorithmic Accountability
+  - AI Ethics
+  - Sociotechnical Applications
+  - Bias Mitigation
+  - Large Language Models (LLMs)
+  - Causal RLHF
+  - Fine-Tuning Methodologies
+  - Intersection between AI applications and various fields (medical, financial, psychology, etc.)
 
 education:
   courses:
@@ -29,10 +34,10 @@ social:
     link: mailto:hannah.liu25@imperial.ac.uk
   - icon: google-scholar
     icon_pack: ai
-    link: https://scholar.google.com
+    link: https://scholar.google.com/citations?hl=en&user=VqE_eFIAAAAJ&view_op=list_works&gmla=AEk_c1tu6D4hqS7bgl44aeCVFK_XjvBRFjMsquMTFsp9rYCiQap27uXmzbEghon-sP9u3TFmvmbJvzNLUceMmdHS
   - icon: linkedin
     icon_pack: fab
-    link: https://linkedin.com/in/yourprofile
+    link: https://www.linkedin.com/in/hannah-liu-981b33208/
 
 superuser: true
 ---
