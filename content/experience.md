@@ -1,5 +1,5 @@
 ---
-title: "what I've been up to"
+title: "What I've Been Up To"
 date: 2023-10-24
 type: landing
 
@@ -57,9 +57,17 @@ sections:
     content:
       title: Skills
       username: me
+    design:
+      background:
+        gradient_mesh:
+          enable: true
 
   - block: resume-awards
     content:
       title: Awards
       username: me
+    design:
+      background:
+        gradient_mesh:
+          enable: true
 ---

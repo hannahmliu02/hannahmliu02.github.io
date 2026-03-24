@@ -4,9 +4,9 @@
   #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: about me
+  - name: About Me
     url: /
     weight: 10
-  - name: what I've been up to
-    url: experience/
+  - name: What I've Been Up To
+    url: what-ive-been-up-to/
     weight: 20
