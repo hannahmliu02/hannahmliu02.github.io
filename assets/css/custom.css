@@ -45,10 +45,20 @@ section p, section li, section span {
   margin-top: 2rem;
 }
 
-/* Awards text black */
+/* Awards text black, headers navy */
 .resume-awards * {
   color: #111111 !important;
   font-family: inherit !important;
+}
+
+.resume-awards h1,
+.resume-awards h2,
+.resume-awards h3,
+.resume-awards h4,
+.resume-awards [class*="title"],
+.resume-awards [class*="heading"],
+.resume-awards strong:first-child {
+  color: #1e2f5e !important;
 }
 
 /* Tooltips on social icon buttons */
