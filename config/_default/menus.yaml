@@ -7,6 +7,6 @@ main:
   - name: about me
     url: /
     weight: 10
-  - name: what I have been up to
+  - name: what I've been up to
     url: experience/
     weight: 20
