@@ -4,14 +4,8 @@ body:has(.resume-skills) {
   background-attachment: fixed;
 }
 
-body:has(.resume-skills) section,
-body:has(.resume-skills) .section-container,
-body:has(.resume-skills) div[class*="section"],
-body:has(.resume-skills) div[class*="block"],
-body:has(.resume-skills) .resume-skills,
-body:has(.resume-skills) .resume-awards,
-body:has(.resume-skills) main > div,
-body:has(.resume-skills) main > section {
+/* Remove white block backgrounds */
+body:has(.resume-skills) .home-section-bg {
   background: transparent !important;
   background-color: transparent !important;
 }
@@ -63,28 +57,22 @@ section p, section li, section span {
   margin-top: 2rem;
 }
 
-/* Awards text black, headers navy */
-.resume-awards,
-.resume-awards *,
-.resume-awards p,
-.resume-awards span,
-.resume-awards div,
-.resume-awards li,
-.resume-awards time {
+/* Skills headers and names black */
+.blox-resume-skills .text-gray-900,
+.blox-resume-skills .text-gray-700,
+.skills-name {
   color: #111111 !important;
-  font-family: inherit !important;
 }
 
-.resume-awards h1, .resume-awards h2, .resume-awards h3, .resume-awards h4,
-.resume-awards [class*="title"], .resume-awards [class*="heading"],
-.resume-skills h1, .resume-skills h2, .resume-skills h3, .resume-skills h4,
-.resume-skills [class*="title"], .resume-skills [class*="heading"],
-section:has(.resume-skills) h1, section:has(.resume-skills) h2,
-section:has(.resume-awards) h1, section:has(.resume-awards) h2,
-[class*="section"]:has(.resume-skills) > * > h1,
-[class*="section"]:has(.resume-skills) > * > h2,
-[class*="section"]:has(.resume-awards) > * > h1,
-[class*="section"]:has(.resume-awards) > * > h2 {
+/* Awards — transparent cards, black text */
+.blox-resume-awards .bg-white {
+  background-color: transparent !important;
+  border-color: rgba(255,255,255,0.3) !important;
+}
+
+.blox-resume-awards .text-gray-900,
+.blox-resume-awards .text-gray-500,
+.blox-resume-awards .text-primary-600 {
   color: #111111 !important;
 }
 
