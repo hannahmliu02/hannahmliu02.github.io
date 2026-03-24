@@ -1,28 +1,52 @@
-
-/* Force black across bio text, skills, awards, and prose content */
-[class*="text-primary-"],
-[class*="text-blue-"],
-[class*="text-sky-"] {
+/* ── Light mode overrides ── */
+html:not(.dark) [class*="text-primary-"],
+html:not(.dark) [class*="text-blue-"],
+html:not(.dark) [class*="text-sky-"] {
   color: #111111 !important;
 }
 
-.prose p, .prose li, .prose span, .prose h1, .prose h2, .prose h3, .prose h4,
-section p, section li, section span {
+html:not(.dark) .prose p, html:not(.dark) .prose li,
+html:not(.dark) .prose span, html:not(.dark) .prose h1,
+html:not(.dark) .prose h2, html:not(.dark) .prose h3,
+html:not(.dark) .prose h4,
+html:not(.dark) section p, html:not(.dark) section li,
+html:not(.dark) section span {
   color: #111111 !important;
 }
 
-/* Skills section styling */
+html:not(.dark) .blox-resume-skills .text-gray-900,
+html:not(.dark) .blox-resume-skills .text-gray-700,
+html:not(.dark) .skills-name {
+  color: #111111 !important;
+}
+
+html:not(.dark) .blox-resume-awards .bg-white {
+  background-color: transparent !important;
+  border-color: rgba(255,255,255,0.3) !important;
+}
+
+html:not(.dark) .blox-resume-awards .text-gray-900,
+html:not(.dark) .blox-resume-awards .text-gray-500,
+html:not(.dark) .blox-resume-awards .text-primary-600 {
+  color: #111111 !important;
+}
+
+html:not(.dark) a[aria-label] svg,
+html:not(.dark) a[aria-label] i {
+  color: #111111 !important;
+  fill: #111111 !important;
+}
+
+/* ── Skills layout (mode-independent) ── */
 .resume-skills {
   text-align: center;
   font-family: inherit;
 }
 
 .resume-skills * {
-  color: #111111 !important;
   font-family: inherit !important;
 }
 
-/* Space between skill label and level bar */
 .resume-skills li,
 .resume-skills .skill-item {
   display: flex;
@@ -32,42 +56,14 @@ section p, section li, section span {
   margin-bottom: 0.5rem;
 }
 
-/* Wider gap between label and bar */
 .resume-skills li > span:first-child,
 .resume-skills .skill-item > span:first-child {
   min-width: 160px;
   text-align: right;
 }
 
-/* Space between Technical and Languages groups */
 .resume-skills > div + div,
 .resume-skills > section + section,
 .resume-skills > ul + ul {
   margin-top: 2rem;
-}
-
-/* Skills headers and names black */
-.blox-resume-skills .text-gray-900,
-.blox-resume-skills .text-gray-700,
-.skills-name {
-  color: #111111 !important;
-}
-
-/* Awards — transparent cards, black text */
-.blox-resume-awards .bg-white {
-  background-color: transparent !important;
-  border-color: rgba(255,255,255,0.3) !important;
-}
-
-.blox-resume-awards .text-gray-900,
-.blox-resume-awards .text-gray-500,
-.blox-resume-awards .text-primary-600 {
-  color: #111111 !important;
-}
-
-/* Black social icons */
-a[aria-label] svg,
-a[aria-label] i {
-  color: #111111 !important;
-  fill: #111111 !important;
 }
