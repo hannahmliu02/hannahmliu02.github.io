@@ -7,18 +7,17 @@ name:
   family: Liu
   alternate: ''
   pronunciation: ''
-  pronouns: ''
+  pronouns: she/her
 role: MSc Student in AI Applications and Innovation
 bio: |
-  My research and professional work primarily focuses on creating the mechanisms required to build globally applicable, ethically adequate, and decentralised AI governance frameworks. I use my background in cognitive science and computation to answer sociotechnical questions about AI applications, deriving insights from fields such as psychology, neuroscience, linguistics, and philosophy to better inform approaches to computational problems. I also analyse how we can best integrate AI applications into society without causing harm to underrepresented populations. 
+  My research and professional work primarily focuses on creating the mechanisms required to build globally applicable, ethically adequate, and decentralised AI governance frameworks. I use my background in cognitive science and computation to answer sociotechnical questions about AI applications, deriving insights from fields such as psychology, neuroscience, linguistics, and philosophy to better inform approaches to computational problems. I also analyse how we can best integrate AI applications into society without causing harm to underrepresented populations.
+
+  hannah [dot] liu25 [at] imperial [dot] ac [dot] uk
 affiliations:
   - name: Imperial College London
     url: https://www.imperial.ac.uk/
 
 links:
-  - icon: at-symbol
-    url: mailto:hannah.liu25@imperial.ac.uk
-    label: E-mail Me
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?hl=en&user=VqE_eFIAAAAJ&view_op=list_works&gmla=AEk_c1tu6D4hqS7bgl44aeCVFK_XjvBRFjMsquMTFsp9rYCiQap27uXmzbEghon-sP9u3TFmvmbJvzNLUceMmdHS
     label: Google Scholar

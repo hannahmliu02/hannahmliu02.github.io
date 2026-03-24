@@ -11,14 +11,14 @@ sections:
     content:
       title: ''
       text: |-
-        ## Professional
+        ## Current Professional Role
 
         **Research Engineer in AI Policy and Governance** | Responsible AI Institute | January 2026 – Present
-        - Building a risk classification and policy generation tool for agentic AI systems; creating both the theoretical and technical backends for AI governance mechanisms
+        - Building a risk classification and policy generation tool for agentic AI systems; creating both the **theoretical** and **technical** foundations for AI governance mechanisms
 
         ---
 
-        ## Academic
+        ## Current Academic Role
 
         **Visiting Master's Researcher** | University of Cambridge | October 2025 – Present
         - Analysing the effects of fine-tuning methodologies on AI bias guardrails in LLMs; in collaboration with **Noah Broestl**, under the supervision of **Dr. Umang Bhatt**

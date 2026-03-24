@@ -1,19 +1,37 @@
-/* Center skills section */
-.resume-skills {
-  text-align: center;
-}
-
-/* Dark text for light-blue elements on bio page */
-.text-primary-400, .text-primary-300, .text-blue-400, .text-blue-300 {
+/* Force black for any light-blue text */
+[class*="text-primary-"],
+[class*="text-blue-"],
+[class*="text-sky-"] {
   color: #111111 !important;
 }
 
+/* Skills section styling */
+.resume-skills {
+  text-align: center;
+  font-family: inherit;
+}
 
-/* More space between skill label and level bar */
-.resume-skills .skill-item,
-.resume-skills li {
-  gap: 0.75rem;
+/* Black text for skill labels and group names */
+.resume-skills * {
+  color: #111111 !important;
+  font-family: inherit !important;
+}
+
+/* Space between skill label and level bar */
+.resume-skills li,
+.resume-skills .skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
   margin-bottom: 0.5rem;
+}
+
+/* Wider gap between label column and bar column */
+.resume-skills li > span:first-child,
+.resume-skills .skill-item > span:first-child {
+  min-width: 160px;
+  text-align: right;
 }
 
 /* Tooltips on social icon buttons */
