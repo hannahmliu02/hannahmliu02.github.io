@@ -1,7 +1,12 @@
-/* Force black for any light-blue text */
+/* Force black across bio text, skills, awards, and prose content */
 [class*="text-primary-"],
 [class*="text-blue-"],
 [class*="text-sky-"] {
+  color: #111111 !important;
+}
+
+.prose p, .prose li, .prose span, .prose h1, .prose h2, .prose h3, .prose h4,
+section p, section li, section span {
   color: #111111 !important;
 }
 
@@ -11,7 +16,6 @@
   font-family: inherit;
 }
 
-/* Black text for skill labels and group names */
 .resume-skills * {
   color: #111111 !important;
   font-family: inherit !important;
@@ -27,11 +31,24 @@
   margin-bottom: 0.5rem;
 }
 
-/* Wider gap between label column and bar column */
+/* Wider gap between label and bar */
 .resume-skills li > span:first-child,
 .resume-skills .skill-item > span:first-child {
   min-width: 160px;
   text-align: right;
+}
+
+/* Space between Technical and Languages groups */
+.resume-skills > div + div,
+.resume-skills > section + section,
+.resume-skills > ul + ul {
+  margin-top: 2rem;
+}
+
+/* Awards text black */
+.resume-awards * {
+  color: #111111 !important;
+  font-family: inherit !important;
 }
 
 /* Tooltips on social icon buttons */
@@ -42,7 +59,7 @@ a[aria-label]:hover::after {
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.75);
-  color: #fff;
+  color: #fff !important;
   font-size: 0.75rem;
   padding: 2px 8px;
   border-radius: 4px;
