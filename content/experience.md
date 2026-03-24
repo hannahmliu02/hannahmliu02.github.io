@@ -1,5 +1,6 @@
 ---
 title: "What I've Been Up To"
+slug: what-ive-been-up-to
 date: 2023-10-24
 type: landing
 
