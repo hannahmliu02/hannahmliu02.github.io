@@ -26,7 +26,7 @@ links:
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/hannah-liu-981b33208/
     label: LinkedIn
-  - icon: hero/document-text
+  - icon: custom/cv
     url: uploads/resume.pdf
     label: CV
 
