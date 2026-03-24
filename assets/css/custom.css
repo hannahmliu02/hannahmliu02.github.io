@@ -5,8 +5,15 @@ body:has(.resume-skills) {
 }
 
 body:has(.resume-skills) section,
-body:has(.resume-skills) .section-container {
+body:has(.resume-skills) .section-container,
+body:has(.resume-skills) div[class*="section"],
+body:has(.resume-skills) div[class*="block"],
+body:has(.resume-skills) .resume-skills,
+body:has(.resume-skills) .resume-awards,
+body:has(.resume-skills) main > div,
+body:has(.resume-skills) main > section {
   background: transparent !important;
+  background-color: transparent !important;
 }
 
 /* Force black across bio text, skills, awards, and prose content */
@@ -68,18 +75,16 @@ section p, section li, section span {
   font-family: inherit !important;
 }
 
-.resume-awards h1,
-.resume-awards h2,
-.resume-awards h3,
-.resume-awards h4,
-.resume-awards [class*="title"],
-.resume-awards [class*="heading"],
-.resume-skills h1,
-.resume-skills h2,
-.resume-skills h3,
-.resume-skills h4,
-.resume-skills [class*="title"],
-.resume-skills [class*="heading"] {
+.resume-awards h1, .resume-awards h2, .resume-awards h3, .resume-awards h4,
+.resume-awards [class*="title"], .resume-awards [class*="heading"],
+.resume-skills h1, .resume-skills h2, .resume-skills h3, .resume-skills h4,
+.resume-skills [class*="title"], .resume-skills [class*="heading"],
+section:has(.resume-skills) h1, section:has(.resume-skills) h2,
+section:has(.resume-awards) h1, section:has(.resume-awards) h2,
+[class*="section"]:has(.resume-skills) > * > h1,
+[class*="section"]:has(.resume-skills) > * > h2,
+[class*="section"]:has(.resume-awards) > * > h1,
+[class*="section"]:has(.resume-awards) > * > h2 {
   color: #111111 !important;
 }
 
