@@ -5,9 +5,11 @@ body:has(.resume-skills) {
 }
 
 /* Remove white block backgrounds */
-body:has(.resume-skills) .home-section-bg {
+.blox-resume-skills .home-section-bg,
+.blox-resume-awards .home-section-bg {
   background: transparent !important;
   background-color: transparent !important;
+  opacity: 0 !important;
 }
 
 /* Force black across bio text, skills, awards, and prose content */
