@@ -1,0 +1,8 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[aria-label]').forEach(function (el) {
+      var label = el.getAttribute('aria-label');
+      if (label) el.setAttribute('title', label);
+    });
+  });
+</script>

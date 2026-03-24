@@ -46,7 +46,13 @@ section p, section li, section span {
 }
 
 /* Awards text black, headers navy */
-.resume-awards * {
+.resume-awards,
+.resume-awards *,
+.resume-awards p,
+.resume-awards span,
+.resume-awards div,
+.resume-awards li,
+.resume-awards time {
   color: #111111 !important;
   font-family: inherit !important;
 }
@@ -56,12 +62,27 @@ section p, section li, section span {
 .resume-awards h3,
 .resume-awards h4,
 .resume-awards [class*="title"],
-.resume-awards [class*="heading"],
-.resume-awards strong:first-child {
-  color: #1e2f5e !important;
+.resume-awards [class*="heading"] {
+  color: #2d4a7a !important;
 }
 
-/* Tooltips on social icon buttons */
+/* Black social icons */
+a[aria-label] svg,
+a[aria-label] i {
+  color: #111111 !important;
+  fill: #111111 !important;
+}
+
+/* Suppress native browser tooltip from title/href */
+a[aria-label] {
+  position: relative;
+}
+
+a[aria-label][title] {
+  title: none;
+}
+
+/* Custom tooltip using label field */
 a[aria-label]:hover::after {
   content: attr(aria-label);
   position: absolute;
@@ -75,8 +96,5 @@ a[aria-label]:hover::after {
   border-radius: 4px;
   white-space: nowrap;
   pointer-events: none;
-}
-
-a[aria-label] {
-  position: relative;
+  z-index: 10;
 }
