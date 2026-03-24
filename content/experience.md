@@ -49,18 +49,45 @@ sections:
         **Undergrad Research Project with Penn Medicine** | Date Range
         - Brief description of what this project is, what problem it solves, and what you did.
         - Poster presentation at...
+
+        ---
+
+        ## Skills
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:0.5rem;">
+          <div>
+            <div style="font-weight:700;font-size:1.1rem;margin-bottom:0.75rem;">Technical</div>
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+              <div><div style="font-size:0.9rem;margin-bottom:2px;">Python</div><div style="background:#e5e7eb;border-radius:4px;height:6px;"><div style="width:100%;background:#2d4a7a;border-radius:4px;height:6px;"></div></div></div>
+              <div><div style="font-size:0.9rem;margin-bottom:2px;">Java + JUnit</div><div style="background:#e5e7eb;border-radius:4px;height:6px;"><div style="width:100%;background:#2d4a7a;border-radius:4px;height:6px;"></div></div></div>
+              <div><div style="font-size:0.9rem;margin-bottom:2px;">Machine Learning</div><div style="background:#e5e7eb;border-radius:4px;height:6px;"><div style="width:80%;background:#2d4a7a;border-radius:4px;height:6px;"></div></div></div>
+              <div><div style="font-size:0.9rem;margin-bottom:2px;">Deep Learning</div><div style="background:#e5e7eb;border-radius:4px;height:6px;"><div style="width:80%;background:#2d4a7a;border-radius:4px;height:6px;"></div></div></div>
+              <div><div style="font-size:0.9rem;margin-bottom:2px;">MatLab</div><div style="background:#e5e7eb;border-radius:4px;height:6px;"><div style="width:60%;background:#2d4a7a;border-radius:4px;height:6px;"></div></div></div>
+              <div><div style="font-size:0.9rem;margin-bottom:2px;">R</div><div style="background:#e5e7eb;border-radius:4px;height:6px;"><div style="width:60%;background:#2d4a7a;border-radius:4px;height:6px;"></div></div></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-weight:700;font-size:1.1rem;margin-bottom:0.75rem;">Languages</div>
+            <div style="display:flex;flex-direction:column;gap:0.5rem;">
+              <div><div style="font-size:0.9rem;margin-bottom:2px;">English (native)</div><div style="background:#e5e7eb;border-radius:4px;height:6px;"><div style="width:100%;background:#2d4a7a;border-radius:4px;height:6px;"></div></div></div>
+              <div><div style="font-size:0.9rem;margin-bottom:2px;">Chinese (fluent)</div><div style="background:#e5e7eb;border-radius:4px;height:6px;"><div style="width:100%;background:#2d4a7a;border-radius:4px;height:6px;"></div></div></div>
+              <div><div style="font-size:0.9rem;margin-bottom:2px;">Spanish (learning!)</div><div style="background:#e5e7eb;border-radius:4px;height:6px;"><div style="width:40%;background:#2d4a7a;border-radius:4px;height:6px;"></div></div></div>
+              <div><div style="font-size:0.9rem;margin-bottom:2px;">Japanese (learning!)</div><div style="background:#e5e7eb;border-radius:4px;height:6px;"><div style="width:20%;background:#2d4a7a;border-radius:4px;height:6px;"></div></div></div>
+            </div>
+          </div>
+        </div>
+
+        ---
+
+        ## Awards
+
+        🎓 **Rhodes Scholarship Nominee** | University of Pennsylvania | 2024, 2025
+        Endorsed by UPenn to move forward in the Rhodes Scholarship process
+
+        🎓 **Phi Beta Kappa Inductee** | Phi Beta Kappa | May 2025
+        Top 8% of UPenn's graduating class of 2025
     design:
       background:
         gradient_mesh:
           enable: true
-
-  - block: resume-skills
-    content:
-      title: Skills
-      username: me
-
-  - block: resume-awards
-    content:
-      title: Awards
-      username: me
 ---

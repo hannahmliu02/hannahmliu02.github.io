@@ -1,14 +1,3 @@
-/* Unified gradient background for experience page */
-body:has(.resume-skills) {
-  background: linear-gradient(135deg, #2d4a7a 0%, #3b5ea6 60%, #64748b 100%);
-  background-attachment: fixed;
-}
-
-/* Remove white block backgrounds */
-#section-resume-skills .home-section-bg,
-#section-resume-awards .home-section-bg {
-  display: none !important;
-}
 
 /* Force black across bio text, skills, awards, and prose content */
 [class*="text-primary-"],
