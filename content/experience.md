@@ -58,17 +58,9 @@ sections:
     content:
       title: Skills
       username: me
-    design:
-      background:
-        gradient_mesh:
-          enable: true
 
   - block: resume-awards
     content:
       title: Awards
       username: me
-    design:
-      background:
-        gradient_mesh:
-          enable: true
 ---

@@ -1,3 +1,14 @@
+/* Unified gradient background for experience page */
+body:has(.resume-skills) {
+  background: linear-gradient(135deg, #2d4a7a 0%, #3b5ea6 60%, #64748b 100%);
+  background-attachment: fixed;
+}
+
+body:has(.resume-skills) section,
+body:has(.resume-skills) .section-container {
+  background: transparent !important;
+}
+
 /* Force black across bio text, skills, awards, and prose content */
 [class*="text-primary-"],
 [class*="text-blue-"],
@@ -62,8 +73,14 @@ section p, section li, section span {
 .resume-awards h3,
 .resume-awards h4,
 .resume-awards [class*="title"],
-.resume-awards [class*="heading"] {
-  color: #2d4a7a !important;
+.resume-awards [class*="heading"],
+.resume-skills h1,
+.resume-skills h2,
+.resume-skills h3,
+.resume-skills h4,
+.resume-skills [class*="title"],
+.resume-skills [class*="heading"] {
+  color: #111111 !important;
 }
 
 /* Black social icons */
@@ -71,30 +88,4 @@ a[aria-label] svg,
 a[aria-label] i {
   color: #111111 !important;
   fill: #111111 !important;
-}
-
-/* Suppress native browser tooltip from title/href */
-a[aria-label] {
-  position: relative;
-}
-
-a[aria-label][title] {
-  title: none;
-}
-
-/* Custom tooltip using label field */
-a[aria-label]:hover::after {
-  content: attr(aria-label);
-  position: absolute;
-  bottom: -2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff !important;
-  font-size: 0.75rem;
-  padding: 2px 8px;
-  border-radius: 4px;
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 10;
 }
