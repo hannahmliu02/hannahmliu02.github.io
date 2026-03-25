@@ -33,7 +33,8 @@ sections:
 
         **Analyzing the Effects of Fine-Tuning Methodologies on AI Bias Guardrails in LLMs**
         **Master's Dissertation** | Starting in May 2026
-        - Brief description of what this project is, what problem it solves, and what you did.
+        - Testing the effectiveness of LoRA and OFT on eroding pre-programmed AI bias guardrails in LLMs. 
+        - Aiming to develop a practical recommendation and theorem that industry and academic stakeholders can use to determine how much fine-tuning data they need to eliminate bias guardrails in their specific use case. 
         - In collaboration with the TRACE Lab at the University of Cambridge. 
         - Materials pending.
 
