@@ -40,7 +40,8 @@ sections:
         ---
 
         **TrustX Agent Risk Classification (ARC)** | Technical Paper with RAI | January 2026 - Present
-        - 
+        - Created a structured, iterable tool that provides risk classification for 7 agentic AI system types; grounded in frameworks such as the NIST AI RMF, the EU AI Act, ISO/IEC 42001, OWASP, MITRE ATLAS, and SR 11-7.
+        - Planning to use outputs to inform mapped control recommendations in our upcoming policy generator tool. 
         - Publication of materials is pending. 
 
         ---
