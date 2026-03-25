@@ -39,6 +39,12 @@ sections:
 
         ---
 
+        **TrustX Agent Risk Classification (ARC)** | Technical Paper with RAI | January 2026 - Present
+        - 
+        - Publication of materials is pending. 
+
+        ---
+
         **Developing Bias Identification and Mitigation Techniques for Clinical Prediction Models (CPMs)** | Coursework for Imperial College London ELEC70122: ML for Safety Critical Decision-Making | January 2026 - March 2026
         - Devised bias identification methods that showed CPMs can learn to use missing data as a predictive signal and contribute to undesirable feedback loops in clinical settings.
         - Introduced an uncertainty-triggered measurement intervention and a causal RLHF pipeline as bias mitigation methods for this use case.
