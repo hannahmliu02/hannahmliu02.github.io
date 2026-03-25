@@ -37,6 +37,11 @@ html:not(.dark) a[aria-label] i {
   fill: #111111 !important;
 }
 
+/* ── Prevent hanging/orphaned words ── */
+.prose p, .prose li {
+  text-wrap: pretty;
+}
+
 /* ── Skills layout (mode-independent) ── */
 .resume-skills {
   text-align: center;
