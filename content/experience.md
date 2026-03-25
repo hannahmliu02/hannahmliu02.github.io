@@ -95,11 +95,11 @@ sections:
 
         ## Awards
 
-        🎓 **Rhodes Scholarship Nominee** | University of Pennsylvania | 2024, 2025
-        Endorsed by UPenn to move forward in the Rhodes Scholarship process
+        🎓 **Rhodes Scholarship Nominee** | University of Pennsylvania | August 2024, August 2025
+        - Endorsed by UPenn to move forward in the Rhodes Scholarship process
 
         🎓 **Phi Beta Kappa Inductee** | Phi Beta Kappa | May 2025
-        Top 8% of UPenn's graduating class of 2025
+        - Top 8% of UPenn's graduating class of 2025
     design:
       background:
         gradient_mesh:
