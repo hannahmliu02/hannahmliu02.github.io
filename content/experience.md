@@ -49,7 +49,7 @@ sections:
         **Developing Bias Identification and Mitigation Techniques for Clinical Prediction Models (CPMs)** | Coursework for Imperial College London ELEC70122: ML for Safety Critical Decision-Making | January 2026 - March 2026
         - Devised bias identification methods that showed CPMs can learn to use missing data as a predictive signal and contribute to undesirable feedback loops in clinical settings.
         - Introduced an uncertainty-triggered measurement intervention and a causal RLHF pipeline as bias mitigation methods for this use case.
-        - [See coursework paper here.](/uploads/bias_in_cpms.pdf) 
+        - [See coursework paper here).](/uploads/bias_in_cpms.pdf) Followed NeurIPS format per coursework requirement.
 
         ---
 
