@@ -37,9 +37,10 @@ interests:
   - Sociotechnical Applications
   - Bias Mitigation
   - Large Language Models (LLMs)
-  - Causal RLHF
+  - Causality
   - Fine-Tuning Methodologies
-  - Intersection between AI applications and various fields (medical, financial, psychology, etc.)
+  - AI Applications
+  - Philosophy
 
 skills:
   - name: Technical
@@ -65,7 +66,7 @@ skills:
       - label: Spanish (learning!)
         level: 2
       - label: Japanese (learning!)
-        level: 1
+        level: 2
 awards:
   - title: Phi Beta Kappa Inductee
     awarder: Phi Beta Kappa

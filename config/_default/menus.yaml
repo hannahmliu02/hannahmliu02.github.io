@@ -10,3 +10,9 @@ main:
   - name: What I've Been Up To
     url: what-ive-been-up-to/
     weight: 20
+  - name: Writing
+    url: writing/
+    weight: 30
+  - name: Speaking
+    url: speaking/
+    weight: 40
