@@ -4,12 +4,21 @@
   #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: About Me
-    url: /
+  - name: _me
+    url: about/
     weight: 10
-  - name: What I've Been Up To
+  - name: _research
     url: what-ive-been-up-to/
     weight: 20
-  - name: Writing & Speaking
+  - name: _writing
     url: writing/
     weight: 30
+  - name: _publications
+    url: publications/
+    weight: 40
+  - name: _cv
+    url: /uploads/resume.pdf
+    weight: 50
+  - name: _contact
+    url: mailto:hannah.liu25@imperial.ac.uk
+    weight: 60

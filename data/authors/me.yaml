@@ -16,8 +16,8 @@ bio: |
 
   If you would like to discuss anything about AI governance, AI applications, or what book I'm currently reading, feel free to reach out at hannah [dot] liu25 [at] imperial [dot] ac [dot] uk.
 affiliations:
-  - name: Imperial College London
-    url: https://www.imperial.ac.uk/
+  - name: Imperial College London · Responsible AI Institute · University of Cambridge
+    url: ""
 
 links:
   - icon: academicons/google-scholar
@@ -37,7 +37,7 @@ interests:
   - Sociotechnical Applications
   - Bias Mitigation
   - Large Language Models (LLMs)
-  - Causality
+  - Causal Inference
   - Fine-Tuning Methodologies
   - AI Applications
   - Philosophy

@@ -1,6 +1,6 @@
 ---
-# Leave the homepage title empty to use the site title
-title: ''
+title: 'About Me'
+slug: about
 summary: ''
 date: 2022-10-24
 type: landing
@@ -10,19 +10,24 @@ design:
   spacing: '6rem'
 
 sections:
-  - block: resume-biography
+  - block: resume-biography-3
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: me
       text: ''
-      # Optionally show a call-to-action button below the bio
       button:
+      headings:
+        about: 'About Me'
+        education: ''
+        interests: 'Academic Interests'
     design:
-      # Clean, centered hero on a plain background (re-enable the mesh below if you
-      # want your navy gradient back)
-      # background:
-      #   gradient_mesh:
-      #     enable: true
+      background:
+        gradient_mesh:
+          enable: true
+
+      # Name heading sizing to accommodate long or short names
+      name:
+        size: md # Options: xs, sm, md, lg (default), xl
 
       # Avatar customization
       avatar:
