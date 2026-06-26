@@ -42,35 +42,6 @@ html:not(.dark) a[aria-label] i {
   text-wrap: pretty;
 }
 
-/* ── Monospace underscore nav (landing style) ── */
-.navbar-brand,
-#nav-menu .nav-link,
-.nav-dropdown-link {
-  font-family: ui-monospace, "SF Mono", "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace;
-  letter-spacing: -0.02em;
-}
-
-.navbar-brand {
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-
-#nav-menu .nav-link {
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-/* Subtle hover/active accent in the site's navy */
-#nav-menu .nav-link:hover,
-#nav-menu .nav-link.active {
-  color: var(--color-primary-600, #2d4a7a);
-}
-
-/* Center the hero affiliation/role lines tightly under the name */
-.network-icon {
-  margin-top: 0.75rem;
-}
-
 /* ── Skills layout (mode-independent) ── */
 .resume-skills {
   text-align: center;

@@ -82,9 +82,9 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   header:
     enable: true
-    # Brand text shown in the navbar (overrides the display name here only;
-    # copyright/SEO still use identity.name)
-    title: "_hl"
+    # Show the logo image (assets/media/logo.png) instead of the site-name text
+    show_logo: true
+    show_title: false
     # Header style variant
     style: navbar                       # navbar | navbar-simple | minimal
     # Stick to top on scroll
@@ -92,10 +92,10 @@ hugoblox:
     # Menu alignment
     align: center                       # left | center | right
     # Feature toggles
-    search: false
+    search: true
     theme_toggle: true
     theme_picker: false
-    language_switcher: false
+    language_switcher: true
     # Call-to-action button
     cta:
       enable: false
