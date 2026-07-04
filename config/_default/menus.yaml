@@ -13,6 +13,7 @@ main:
   - name: Responsible AI Institute
     url: responsible-ai-institute/
     weight: 25
-  - name: Writing & Speaking
-    url: writing/
-    weight: 30
+  # Writing & Speaking hidden until ready — re-add to show it in the nav.
+  # - name: Writing & Speaking
+  #   url: writing/
+  #   weight: 30

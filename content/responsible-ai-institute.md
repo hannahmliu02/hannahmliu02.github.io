@@ -12,6 +12,7 @@ sections:
     content:
       title: ''
       text: |-
+        ## My Work at the Responsible AI Institute
 
         As a **Research Engineer in AI Policy and Governance** at the Responsible AI Institute (RAI), I build the theoretical and technical foundations for practical AI governance mechanisms. Recent projects include developing a risk classification framework for agentic AI, creating a policy-to-control mapping system, and establishing the foundations of an open source AI registry. I am also leading the upcoming RAI Fellowship program to mentor young gradudates looking to break into the AI governance space.
 
@@ -21,7 +22,7 @@ sections:
 
         ---
 
-        ### Project Spotlight
+        ## Project Spotlight
 
         **RAI Open AI Registry (ROAR)**\
         A component of our launch of the TrustX for Finance Working Group was the introduction of the RAI Open AI Registry (ROAR), which allows individuals to contribute to an open source platform that shows how their AI applications map to our TrustX risk framework. This is a part of RAI's goals to create a collective core of iterative feedback within the AI governance community. [Our landing site for the working group shows a sneak peek of the registry.](https://www.responsible.ai/trustx-finance/)
@@ -40,7 +41,7 @@ sections:
 
         ---
 
-        ### Talks & Panels
+        ## Talks & Panels
 
         **Ensuring Growing AI Use Isn't Increasing Security Risk**\
         *London Tech Week 2026 Panel*\
@@ -64,7 +65,7 @@ sections:
 
         ---
 
-        ### Policy & Insights Newsletter
+        ## Policy & Insights Newsletter
 
         Every month, I write on AI policy and governance developments with the Practising Lawyer's Institute. You can read them below.
 

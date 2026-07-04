@@ -4,6 +4,13 @@ title: Writing & Speaking
 cms_exclude: true
 type: landing
 
+# ── Hidden until ready: excluded from the published build. ──
+# Also drafts the writing cards below it. To publish, delete these two keys
+# (draft + cascade) and re-add the nav item in config/_default/menus.yaml.
+draft: true
+cascade:
+  draft: true
+
 design:
   spacing: '2rem'
 
@@ -36,7 +43,7 @@ sections:
       text: |-
         ## Speaking
 
-        **Panel: Ensuring Growing AI Use Isn’t Increasing Security Risk ** | London Tech Week 2026 | June 2026
+        **Panel: Ensuring Growing AI Use Isn’t Increasing Security Risk** | London Tech Week 2026 | June 2026
         - Discussed the fluid yet nuanced definition of AI risk, the risks of shadow AI, how to manage risk at scale, and future steps towards effective AI governance.
         - [Agenda.](https://londontechweek.com/2026-agenda)
 
@@ -55,7 +62,7 @@ sections:
 
         ---
 
-        **Comparing Predictive Machine Learning Models' Capacity to Objectively Predict Dyspnea** | BMES 2023 Annual Meeting | October 2023
-        - Developed predictive ML models that automatically and accurately estimated a patient's breathing exertion levels; allowed doctors to monitor patient with respiratory illness without using physically invasive methods. 
-        - [Poster presentation.](/uploads/bmes.pdf)
+        **Comparing Predictive Machine Learning Models' Capacity to Objectively Predict Dyspnea**\
+        *BMES 2023 Annual Meeting in October 2023*
+        Developed predictive ML models that automatically and accurately estimated a patient's breathing exertion levels; allowed doctors to monitor patient with respiratory illness without using physically invasive methods.[Poster presentation.](/uploads/bmes.pdf)
 ---
