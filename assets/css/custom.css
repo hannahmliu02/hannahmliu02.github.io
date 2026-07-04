@@ -42,6 +42,12 @@ html:not(.dark) a[aria-label] i {
   text-wrap: pretty;
 }
 
+/* ── Larger name on the landing hero (centered biography block only) ── */
+.blox-resume-biography .text-3xl {
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  line-height: 1.1;
+}
+
 /* ── Skills layout (mode-independent) ── */
 .resume-skills {
   text-align: center;

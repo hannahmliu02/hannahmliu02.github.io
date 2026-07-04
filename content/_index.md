@@ -22,9 +22,8 @@ sections:
       biography:
         style: 'text-align: center;'
 
-      # Clean, centered hero on a plain background (re-enable the mesh below if you
-      # want your navy gradient back)
-      # background:
+      # Navy gradient mesh background
+      background:
         gradient_mesh:
           enable: true
 
