@@ -14,7 +14,7 @@ sections:
       text: |-
         ## My Work at the Responsible AI Institute
 
-        As a **Research Engineer in AI Policy and Governance** at the Responsible AI Institute (RAI), I build the theoretical and technical foundations for practical AI governance mechanisms. Recent projects include developing a risk classification framework for agentic AI, creating a policy-to-control mapping system, and establishing the foundations of an open source AI registry. I am also leading the upcoming RAI Fellowship program to mentor young gradudates looking to break into the AI governance space.
+        As a **Research Engineer in AI Policy and Governance** at the Responsible AI Institute (RAI), I build the theoretical and technical foundations for practical AI governance mechanisms. Recent projects include developing a risk classification framework for agentic AI, creating a policy-to-control mapping system, and establishing the foundations of an open source AI registry. I am also leading the upcoming RAI Fellowship programme to mentor young graduates looking to break into the AI governance space.
 
         <div style="display:flex;flex-direction:column;gap:1rem;margin:1rem 0;max-width:640px;">
           <img src="/uploads/rai_top_image.png" alt="RAI Introduction" style="width:100%;border-radius:8px;">
@@ -56,7 +56,7 @@ sections:
 
         **Why 95% of Enterprise AI Projects Fail: The missing governance step that unlocks ROI**\
         *AI Summit London 2026 Partner-Led Meetup*\
-        Facilitated a discussion about the real pain points organizations face with AI governance and how the Responsible AI Institute's TrustX framework and member community provide solutions and avenues for collaboration.
+        Facilitated a discussion about the real pain points organisations face with AI governance and how the Responsible AI Institute's TrustX framework and member community provide solutions and avenues for collaboration.\
         [You can view our slide deck here.](/uploads/rai_networking_deck.pdf)
 
         <div style="display:flex;flex-direction:column;gap:1rem;margin:1rem 0;max-width:640px;">
@@ -71,11 +71,7 @@ sections:
 
         - [June 2026:](https://bit.ly/4vGLKyS) Move Fast, Responsibly: Takeaways and Insights from London Tech Week
         - [May 2026:](/uploads/pli_may.pdf) Beyond Internal Controls: Expanding AI Risk Assessments into Procurement and Exposure Dimensions
-        - [April 2026:](/uploads/pli_april.pdf) Analyzing the Potential Risks of Procuring Off-the-Shelf Models in Financial Services Use Cases
-
-        ---
-
-
+        - [April 2026:](/uploads/pli_april.pdf) Analysing the Potential Risks of Procuring Off-the-Shelf Models in Financial Services Use Cases
 
     design:
       background:

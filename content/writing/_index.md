@@ -49,13 +49,13 @@ sections:
 
         ---
 
-         **Partner-Led Meetup: Ensuring Growing AI Use Isn’t Increasing Security Risk ** | AI Summit London 2026 | June 2026
+        **Partner-Led Meetup: Ensuring Growing AI Use Isn’t Increasing Security Risk** | AI Summit London 2026 | June 2026
         - Facilitated a discussion about the real pain points organizations face with AI governance and how the Responsible AI Institute's TrustX framework and member community provide solutions and avenues for collaboration
         - [Agenda.](https://london.theaisummit.com/conference-agenda/full-agenda/)
 
         ---
 
-        **Poster: Investigating the Presence of Bias and Potential Copyright Concerns in LLM Image Generation Capabilities** | Penn NRCP 2025 | October 2026
+        **Poster: Investigating the Presence of Bias and Potential Copyright Concerns in LLM Image Generation Capabilities** | Penn NRCP 2025 | October 2025
         - Used quantitative and qualitative sociotechnical evaluation methods to investigate racial bias, gender bias, and potential copyright concerns in LLM-generated movie posters.
         - [Poster and oral presentation.](/uploads/nrcp.pdf)
         - [Work-in-progress manuscript.](/uploads/chi2026.pdf)
@@ -63,6 +63,7 @@ sections:
         ---
 
         **Comparing Predictive Machine Learning Models' Capacity to Objectively Predict Dyspnea**\
-        *BMES 2023 Annual Meeting in October 2023*
-        Developed predictive ML models that automatically and accurately estimated a patient's breathing exertion levels; allowed doctors to monitor patient with respiratory illness without using physically invasive methods.[Poster presentation.](/uploads/bmes.pdf)
+        *BMES 2023 Annual Meeting in October 2023*\
+        Developed predictive ML models that automatically and accurately estimated a patient's breathing exertion levels; allowed doctors to monitor patient with respiratory illness without using physically invasive methods.\
+        [Poster presentation.](/uploads/bmes.pdf)
 ---
