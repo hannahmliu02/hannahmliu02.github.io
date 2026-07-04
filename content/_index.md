@@ -18,6 +18,10 @@ sections:
       # Optionally show a call-to-action button below the bio
       button:
     design:
+      # Center the bio text under the name
+      biography:
+        style: 'text-align: center;'
+
       # Clean, centered hero on a plain background (re-enable the mesh below if you
       # want your navy gradient back)
       # background:
