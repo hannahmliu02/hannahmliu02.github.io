@@ -12,42 +12,58 @@ sections:
     content:
       title: ''
       text: |-
-        ## Responsible AI Institute
-
-        As a **Research Engineer in AI Policy and Governance** at the Responsible AI Institute (January 2026 – Present),
-        I build the **theoretical** and **technical** foundations for practical AI governance mechanisms — most recently
-        a risk classification and policy generation tool for agentic AI systems.
+        As a **Research Engineer in AI Policy and Governance** at the Responsible AI Institute (RAI), I build the theoretical and technical foundations for practical AI governance mechanisms. Recent projects include developing a risk classification framework for agentic AI, creating a policy-to-control mapping system, and establishing the foundations of an open source AI registry. I am also leading the upcoming RAI Fellowship program to mentor young gradudates looking to break into the AI governance space.
 
         ---
 
-        ### TrustX Agent Risk Classification (ARC)
-        *Technical paper · January 2026 – Present*
+        ### Project Spotlight
 
-        - Created a structured, iterable tool that provides risk classification for **7 agentic AI system types**.
-        - Grounded in established frameworks: the **NIST AI RMF**, the **EU AI Act**, **ISO/IEC 42001**, **OWASP**, **MITRE ATLAS**, and **SR 11-7**.
-        - Outputs will inform mapped control recommendations in our upcoming **policy generator** tool.
-        - Publication of materials is pending.
+        **RAI Open AI Registry (ROAR)**
+        
+        **TrustX Expanded Risk Framework**
+        The expanded framework builds off of ARC by including procurement risk and exposure risk to legacy systems. It maintains the 12-risk dimension core introduced in ARC and tailors the risk classification to each risk surface with additional components, such as a procurement dossier or an agentic threat testing layer. 
+
+        A version of our working paper can be viewed here: (/uploads/trustx_expanded_working.pdf)
+
+
+        **TrustX Agent Risk Classification (ARC)**
+        ARC is a structured, iterable framework that provides risk classification for 7 agentic AI system types. It is grounded in established frameworks, such as the NIST AI RMF, the EU AI Act, ISO/IEC 42001, OWASP, MITRE ATLAS, and SR 11-7/26-2. Its outputs will then inform mapped control recommendations in RAI's policy generator tool. 
+
+        A version of our working paper can be viewed here: (/uploads/arc_working.pdf)
 
         ---
 
         ### Talks & Panels
 
-        **Panel: Ensuring Growing AI Use Isn't Increasing Security Risk** | London Tech Week 2026 | June 2026
-        - Discussed the fluid yet nuanced definition of AI risk, the risks of shadow AI, how to manage risk at scale, and future steps towards effective AI governance.
-        - [Agenda.](https://londontechweek.com/2026-agenda)
+        **Ensuring Growing AI Use Isn't Increasing Security Risk**
+        *London Tech Week 2026 Panel*
+        Discussed the fluid yet nuanced definition of AI risk, the risks of shadow AI, how to manage risk at scale, and future steps towards effective AI governance.
 
-        **Partner-Led Meetup: Ensuring Growing AI Use Isn't Increasing Security Risk** | AI Summit London 2026 | June 2026
-        - Facilitated a discussion about the real pain points organizations face with AI governance and how the Responsible AI Institute's TrustX framework and member community provide solutions and avenues for collaboration.
-        - [Agenda.](https://london.theaisummit.com/conference-agenda/full-agenda/)
+        <div style="display:flex;flex-direction:column;gap:1rem;margin:1rem 0;max-width:640px;">
+          <img src="/uploads/ltw1.jpg" alt="Speaking on the London Tech Week 2026 panel" style="width:100%;border-radius:8px;">
+          <img src="/uploads/ltw2.jpg" alt="Speaking on the London Tech Week 2026 panel" style="width:100%;border-radius:8px;">
+        </div>
+        
+
+        **Why 95% of Enterprise AI Projects Fail: The missing governance step that unlocks ROI**
+        *AI Summit London 2026 Partner-Led Meetup*
+        Facilitated a discussion about the real pain points organizations face with AI governance and how the Responsible AI Institute's TrustX framework and member community provide solutions and avenues for collaboration.
+        - [Slide Deck.](/uploads/rai_networking_deck.pdf)
 
         ---
 
         ### Policy & Insights Newsletter
 
-        Monthly pieces I write on AI policy and governance developments.
+        Every month, I write on AI policy and governance developments with the Practising Lawyer's Institute. You can read them below.
 
-        - [April 2026](/uploads/pli_april.pdf)
-        - [May 2026](/uploads/pli_may.pdf)
+        - [June 2026: ]()
+        - [May 2026: ](/uploads/pli_may.pdf)
+        - [April 2026: ](/uploads/pli_april.pdf)
+
+        ---
+
+
+
     design:
       background:
         gradient_mesh:
