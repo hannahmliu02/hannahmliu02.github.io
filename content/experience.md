@@ -65,7 +65,7 @@ sections:
 
         ## Skills
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:0.5rem;">azstfgr-0
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:0.5rem;">
           <div>
             <div style="font-weight:700;font-size:1.1rem;margin-bottom:0.75rem;">Technical</div>
             <div style="display:flex;flex-direction:column;gap:0.5rem;">
