@@ -21,7 +21,7 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: ""
     # Site meta description for search engines and social sharing
-    description: "The highly-customizable Hugo Academic theme powered by HugoBlox Kit. Easily create your personal academic website."
+    description: "Personal website of Hannah Liu, a researcher working in AI governance, safety, and ethics."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "MakeOwnable"              # Twitter/X handle for Twitter Cards (without @)
