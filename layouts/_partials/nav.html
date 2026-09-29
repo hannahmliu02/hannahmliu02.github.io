@@ -1,0 +1,18 @@
+<header class="site-nav">
+  <a class="brand" href="{{ "/" | relURL }}">
+    {{- with resources.Get "media/icon.png" }}<img src="{{ (.Fill "64x64 png").RelPermalink }}" alt="" width="26" height="26">{{ end -}}
+    {{ site.Title }}
+  </a>
+  <div class="right">
+    <nav aria-label="Site">
+      <ul>
+        {{- $here := .RelPermalink }}
+        {{- range site.Menus.main }}
+          {{- $url := .URL | relURL }}
+          <li><a href="{{ $url }}"{{ if eq $url $here }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Colour theme: automatic. Click to change.">Auto</button>
+  </div>
+</header>

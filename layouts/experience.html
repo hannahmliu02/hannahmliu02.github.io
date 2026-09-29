@@ -1,0 +1,93 @@
+{{ define "main" }}
+{{- $areas := site.Home.Params.areas | default slice }}
+<header class="page-head">
+  {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.intro }}<p class="lede">{{ . }}</p>{{ end }}
+</header>
+
+<section class="filter rule" aria-labelledby="filter-label" id="field-filter" hidden>
+  <div class="filter-top">
+    <p class="label" id="filter-label">Filter by field</p>
+    <p class="status" id="status" aria-live="polite"></p>
+    <button type="button" class="clear" id="clear" hidden>Show all</button>
+  </div>
+  <ul class="fields" id="fields">
+    {{- range site.Params.fields }}
+      <li><button type="button" aria-pressed="false" data-field="{{ .id }}"><span class="fname">{{ .name }}</span><span class="count" aria-hidden="true"></span></button></li>
+    {{- end }}
+  </ul>
+</section>
+
+{{- range .Params.groups }}
+<section class="block rule" aria-labelledby="h-{{ .title | urlize }}">
+  <h2 id="h-{{ .title | urlize }}">{{ .title }}</h2>
+  {{ with .note }}<p>{{ . }}</p>{{ end }}
+  <ol class="timeline">
+    {{- range .entries }}
+    {{- $applied := eq .kind "applied" }}
+    <li>
+      <article class="entry{{ if $applied }} applied{{ end }}" id="{{ .id }}" data-fields="{{ delimit .fields " " }}" tabindex="-1">
+        {{ partial "glyph.html" (dict "fields" .fields "kind" (cond $applied "project" "topic")) }}
+        <div>
+          <p class="kicker">{{ .org }} · {{ .dates }}</p>
+          <h3>{{ .title }}</h3>
+          <div class="desc">{{ .text | markdownify }}</div>
+          {{- with .links }}
+          <ul class="links">
+            {{- range . }}<li><a href="{{ .url | relURL }}">{{ .label }}</a></li>{{ end }}
+          </ul>
+          {{- end }}
+          <div class="meta">
+            {{ partial "field-chips.html" .fields }}
+            {{- with .related }}
+            <span class="related"><span class="k">Related</span>
+              {{- range . }}{{ $id := . }}{{ range where $areas "id" $id }}<a href="{{ printf "/#%s" .id | relURL }}"><span class="mk {{ .kind }}"></span>{{ .name }}</a>{{ end }}{{ end -}}
+            </span>
+            {{- end }}
+          </div>
+        </div>
+      </article>
+    </li>
+    {{- end }}
+  </ol>
+</section>
+{{- end }}
+
+{{- with .Params.skills }}
+<section class="block rule" aria-labelledby="h-skills">
+  <h2 id="h-skills">Skills</h2>
+  <div class="two">
+    {{- range . }}
+    <div>
+      <h3>{{ .title }}</h3>
+      <ul class="nodes">
+        {{- range .items }}<li{{ if .full }} class="full"{{ end }}>{{ .name }}{{ with .note }} <small>{{ . }}</small>{{ end }}</li>{{ end }}
+      </ul>
+      {{ with .key }}<p class="key">{{ . }}</p>{{ end }}
+    </div>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
+
+{{- with .Params.awards }}
+<section class="block rule" aria-labelledby="h-awards">
+  <h2 id="h-awards">Awards</h2>
+  <ul class="awards">
+    {{- range . }}
+    <li>
+      <p class="kicker">{{ .org }} · {{ .dates }}</p>
+      <h3>{{ .title }}</h3>
+      <p>{{ .text }}</p>
+    </li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/experience.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}

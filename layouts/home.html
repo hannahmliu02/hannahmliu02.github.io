@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{- $areas := .Params.areas | default slice }}
+<section class="hero">
+  <div class="hero-text">
+    {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h1>{{ .Params.headline | safeHTML }}</h1>
+    {{ with .Params.lede }}<p class="lede">{{ . }}</p>{{ end }}
+    {{ with .Params.lede_small }}<p class="lede small">{{ . }}</p>{{ end }}
+    <p class="hint">Hover or tap a field, a research area or a project to trace its connections. Select one to see where it comes up.</p>
+  </div>
+  <div class="graph-col">
+    <div class="graph-box home-graph">
+      <canvas id="graph" role="img" aria-label="A network diagram. Nine fields sit on a ring: {{ delimit (apply site.Params.fields "index" "." "name") ", " }}. Each branches outward like a fractal tree, and neighbouring branches link up. Inside the ring are research areas and Responsible AI Institute projects, each connected to the fields it draws on. The same areas and projects are listed below."></canvas>
+    </div>
+    <div class="legend" id="legend" aria-label="Highlight a group">
+      <button type="button" id="lg-field" data-group="field"><span class="mk field"></span>Fields</button>
+      <button type="button" id="lg-topic" data-group="topic"><span class="mk topic"></span>Research areas</button>
+      <button type="button" id="lg-project" data-group="project"><span class="mk project"></span>RAI projects</button>
+    </div>
+    <div class="mentions" id="mentions" aria-live="polite">Select a research area or project to see where it comes up on this site.</div>
+  </div>
+</section>
+
+<section class="list rule" aria-labelledby="h-research">
+  <h2 id="h-research">Research at the intersections</h2>
+  <p>Each area draws on several fields at once. In the graph, these are the gold nodes.</p>
+  <ul class="items" id="topics">
+    {{- range $i, $a := $areas }}{{ if eq $a.kind "topic" }}{{ partial "home-item.html" (dict "a" $a "i" $i) }}{{ end }}{{ end }}
+  </ul>
+</section>
+
+<section class="list" aria-labelledby="h-rai">
+  <h2 id="h-rai">At the Responsible AI Institute</h2>
+  <p>Applied governance work, where law, policy and economics meet computation. In the graph, these are the navy diamonds.</p>
+  <ul class="items three" id="projects">
+    {{- range $i, $a := $areas }}{{ if eq $a.kind "project" }}{{ partial "home-item.html" (dict "a" $a "i" $i) }}{{ end }}{{ end }}
+  </ul>
+</section>
+
+<script id="graph-data" type="application/json">{{ dict "fields" site.Params.fields "areas" $areas | jsonify | safeJS }}</script>
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/home-graph.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}

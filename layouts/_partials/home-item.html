@@ -1,0 +1,17 @@
+{{- $a := .a -}}
+<li>
+  <article class="item" id="{{ $a.id }}" data-i="{{ .i }}" tabindex="-1">
+    {{ partial "glyph.html" (dict "fields" $a.fields "kind" $a.kind) }}
+    <div>
+      {{ with $a.kicker }}<p class="kicker">{{ . }}</p>{{ end }}
+      <h3>{{ $a.name }}</h3>
+      <p>{{ $a.blurb }}</p>
+      {{ partial "field-chips.html" $a.fields }}
+      {{- with $a.mentions }}
+      <ul class="seen">
+        {{- range . }}<li><a href="{{ .url | relURL }}">{{ .label }}</a></li>{{ end }}
+      </ul>
+      {{- end }}
+    </div>
+  </article>
+</li>

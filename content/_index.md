@@ -1,34 +1,81 @@
 ---
-# Leave the homepage title empty to use the site title
-title: ''
-summary: ''
-date: 2022-10-24
-type: landing
+title: Hannah Liu
 
-design:
-  # Default section spacing
-  spacing: '6rem'
+eyebrow: AI governance researcher
+headline: Working where the <em>disciplines meet</em>
+lede: I study how AI should be governed, drawing on nine fields, from cognitive science and computation to law and economics.
+lede_small: My research looks at governance frameworks that are decentralised, ethically sound and work across the world, and at how AI can enter society without harming underrepresented people. At the Responsible AI Institute, I turn that thinking into practical tools, like risk frameworks for agentic AI and an open registry of AI applications.
 
-sections:
-  - block: resume-biography
-    content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
-      username: me
-      text: 'My research and professional work primarily focuses on creating the mechanisms required to build globally applicable, ethically adequate, and decentralised AI governance frameworks. I use my background in cognitive science and computation to answer sociotechnical questions about AI applications, deriving insights from fields such as psychology, neuroscience, linguistics, and philosophy to better inform approaches to computational problems. I also analyse how we can best integrate AI applications into society without causing harm to underrepresented populations.'
-      # Optionally show a call-to-action button below the bio
-      button:
-    design:
-      # Center the bio text under the name
-      biography:
-        style: 'text-align: center;'
+# Research areas (gold nodes) and Responsible AI Institute projects (navy diamonds).
+# `fields` use the ids in config/_default/params.yaml.
+# `mentions` are the places on the site each one comes up. The graph and the lists link to them.
+areas:
+  - id: decentralised-ai-governance
+    kind: topic
+    name: Decentralised AI governance
+    fields: [phil, law, pol]
+    blurb: Frameworks that hold up across countries and cultures, without a single central authority.
+    mentions:
+      - { label: My research focus, url: /about/#bio }
+      - { label: ROAR, an open AI registry, url: /responsible-ai-institute/#roar }
+      - { label: Research engineer at RAI, url: /what-ive-been-up-to/#rai }
 
-      # Navy gradient mesh background
-      background:
-        gradient_mesh:
-          enable: true
+  - id: fairness-for-underrepresented-groups
+    kind: topic
+    name: Fairness for underrepresented groups
+    fields: [ling, phil, psych]
+    blurb: How AI systems can serve people who are usually missing from training data and policy rooms.
+    mentions:
+      - { label: My research focus, url: /about/#bio }
+      - { label: Bias in clinical prediction models, url: /what-ive-been-up-to/#clinical-prediction }
+      - { label: Bias in LLM image generation, url: /what-ive-been-up-to/#image-generation }
 
-      # Avatar customization
-      avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
+  - id: human-and-machine-cognition
+    kind: topic
+    name: Human and machine cognition
+    fields: [cog, neuro, comp]
+    blurb: Using what we know about minds to ask better questions about models.
+    mentions:
+      - { label: BA in Cognitive Science, url: /about/#education }
+      - { label: Traits of successful forecasters, url: /what-ive-been-up-to/#forecasters }
+
+  - id: measuring-model-bias
+    kind: topic
+    name: Measuring model bias
+    fields: [comp, psych, ling]
+    blurb: Evaluating bias both in what models say and in how they represent people internally.
+    mentions:
+      - { label: "Dissertation: fine-tuning and bias guardrails", url: /what-ive-been-up-to/#bias-guardrails }
+      - { label: Visiting researcher at Cambridge, url: /what-ive-been-up-to/#cambridge }
+      - { label: Bias in LLM image generation, url: /what-ive-been-up-to/#image-generation }
+      - { label: Bias in clinical prediction models, url: /what-ive-been-up-to/#clinical-prediction }
+
+  - id: arc
+    kind: project
+    name: ARC
+    kicker: TrustX Agent Risk Classification
+    fields: [law, pol, comp]
+    blurb: Risk classification for seven types of agentic AI system, grounded in the NIST AI RMF, the EU AI Act and ISO/IEC 42001.
+    mentions:
+      - { label: ARC on the RAI page, url: /responsible-ai-institute/#arc }
+      - { label: Research engineer at RAI, url: /what-ive-been-up-to/#rai }
+
+  - id: trustx
+    kind: project
+    name: TrustX
+    kicker: Expanded risk framework
+    fields: [econ, law, pol]
+    blurb: Extends ARC to procurement risk and exposure to legacy systems, with a procurement dossier for each risk surface.
+    mentions:
+      - { label: TrustX on the RAI page, url: /responsible-ai-institute/#trustx }
+      - { label: "Newsletter: procurement and exposure risk", url: /responsible-ai-institute/#newsletter }
+
+  - id: roar
+    kind: project
+    name: ROAR
+    kicker: RAI Open AI Registry
+    fields: [pol, comp, econ]
+    blurb: An open-source registry where people map their AI applications to the TrustX risk framework.
+    mentions:
+      - { label: ROAR on the RAI page, url: /responsible-ai-institute/#roar }
 ---

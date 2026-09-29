@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{- $me := hugo.Data.authors.me }}
+<div class="about">
+  <aside>
+    {{- with resources.Get "media/authors/me.png" }}
+      {{- $img := .Fill "720x720 Center q85 jpg" }}
+      <img class="portrait" src="{{ $img.RelPermalink }}" width="360" height="360" alt="Portrait of {{ $me.name.display }}">
+    {{- end }}
+    <div class="who">
+      <span class="name">{{ $me.name.display }}</span>
+      {{ with $me.name.pronouns }}<span class="role">{{ . }}</span>{{ end }}
+      {{ with $me.role }}<span class="role">{{ . }}</span>{{ end }}
+    </div>
+    <ul class="links">
+      {{- range site.Params.links }}<li><a href="{{ .url }}"{{ if hasPrefix .url "http" }} rel="noopener"{{ end }}>{{ .label }}</a></li>{{ end }}
+    </ul>
+  </aside>
+  <div>
+    {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h1>{{ .Title }}</h1>
+    <section id="bio" class="prose">{{ $me.bio | markdownify }}</section>
+    <div class="facts">
+      {{- with $me.interests }}
+      <section id="interests">
+        <h2>Academic interests</h2>
+        <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      </section>
+      {{- end }}
+      {{- with $me.education }}
+      <section id="education">
+        <h2>Education</h2>
+        <ul>{{ range . }}<li>{{ .degree }}<small>{{ .institution }}</small></li>{{ end }}</ul>
+      </section>
+      {{- end }}
+    </div>
+  </div>
+</div>
+{{ end }}

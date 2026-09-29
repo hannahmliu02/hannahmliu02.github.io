@@ -1,19 +1,16 @@
-# Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-  #     desired widget in your `content/home/` folder.
-  #   The weight parameter defines the order that the links will appear in.
+# Navigation links, in order of weight.
 
 main:
-  - name: About Me
-    url: about/
+  - name: About
+    url: /about/
     weight: 10
   - name: What I've Been Up To
-    url: what-ive-been-up-to/
+    url: /what-ive-been-up-to/
     weight: 20
   - name: Responsible AI Institute
-    url: responsible-ai-institute/
+    url: /responsible-ai-institute/
     weight: 25
-  # Writing & Speaking hidden until ready — re-add to show it in the nav.
+  # Writing & Speaking hidden until ready. Re-add to show it in the nav.
   # - name: Writing & Speaking
-  #   url: writing/
+  #   url: /writing/
   #   weight: 30

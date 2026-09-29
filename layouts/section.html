@@ -1,0 +1,16 @@
+{{ define "main" }}
+<header class="page-head">
+  {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+  <h1>{{ .Title }}</h1>
+</header>
+{{ with .Content }}<div class="page-body prose">{{ . }}</div>{{ end }}
+<ul class="cards">
+  {{- range .Pages.ByDate.Reverse }}
+  <li>
+    <p class="kicker">{{ .Date.Format "January 2006" }}</p>
+    <h3><a href="{{ with .Params.external_link }}{{ . | relURL }}{{ else }}{{ .RelPermalink }}{{ end }}">{{ .Title }}</a></h3>
+    {{ with .Summary }}<p>{{ . | plainify }}</p>{{ end }}
+  </li>
+  {{- end }}
+</ul>
+{{ end }}
