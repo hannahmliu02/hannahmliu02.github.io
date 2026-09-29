@@ -1,0 +1,8 @@
+<footer class="site-foot rule">
+  <span>© {{ now.Year }} {{ site.Params.copyright_name | default site.Title }}</span>
+  <ul>
+    {{- range site.Params.links }}
+      <li><a href="{{ .url }}"{{ if hasPrefix .url "http" }} rel="noopener"{{ end }}>{{ .label }}</a></li>
+    {{- end }}
+  </ul>
+</footer>

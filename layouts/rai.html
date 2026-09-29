@@ -1,0 +1,101 @@
+{{ define "main" }}
+<header class="head">
+  {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+  <h1>{{ .Params.headline | default .Title | safeHTML }}</h1>
+  <div class="head-body">
+    <p>{{ .Params.intro | markdownify }}</p>
+    {{- with .Params.ledger }}
+    <dl class="ledger">
+      {{- range . }}<div><dt>{{ .k }}</dt><dd>{{ .v }}</dd></div>{{ end }}
+    </dl>
+    {{- end }}
+  </div>
+</header>
+
+<section class="band rule" aria-labelledby="h-band">
+  <div class="band-top">
+    <h2 class="mono-label" id="h-band">How the frameworks connect</h2>
+    <p class="mono-label">Hover a node · select a diamond to read more</p>
+  </div>
+  <div class="graph-foot">
+    <p class="graph-cap" id="graph-cap" aria-live="polite">ARC is grounded in established frameworks. TrustX builds off ARC, and ROAR maps AI applications to TrustX.</p>
+    <div class="legend" id="legend" aria-label="Highlight a group">
+      <button type="button" id="lg-core" data-group="core"><span class="mk core"></span>RAI frameworks</button>
+      <button type="button" id="lg-std" data-group="std"><span class="mk std"></span>Grounded in</button>
+      <button type="button" id="lg-fact" data-group="fact"><span class="mk fact"></span>Components</button>
+    </div>
+  </div>
+  <div class="graph-box rai-graph">
+    <canvas id="rai-graph" role="img" aria-label="A network diagram of three connected frameworks. ARC, the TrustX Agent Risk Classification, is grounded in six established frameworks: the NIST AI RMF, the EU AI Act, ISO/IEC 42001, OWASP, MITRE ATLAS and SR 11-7/26-2. ARC covers 7 agentic AI system types, introduces a 12-risk-dimension core, and its outputs feed control recommendations in RAI's policy generator tool. The TrustX expanded risk framework builds off ARC, keeps the 12-risk-dimension core, and adds procurement risk and exposure risk to legacy systems. ROAR, the RAI Open AI Registry, maps contributed AI applications to the TrustX framework and launched with the TrustX for Finance Working Group."></canvas>
+  </div>
+</section>
+
+<ol class="spot" id="spot" aria-label="Project spotlight">
+  {{- range .Params.projects }}
+  <li class="col" id="{{ .id }}" data-node="{{ .id }}" tabindex="-1">
+    <p class="step">{{ partial "glyph.html" (dict "fields" .fields "kind" "project") }}{{ .step }}</p>
+    <h3>{{ .title }}</h3>
+    <p>{{ .text }}</p>
+    {{ with .link }}<p class="more"><a href="{{ .url | relURL }}"{{ if hasPrefix .url "http" }} rel="noopener"{{ end }}>{{ .label }}</a></p>{{ end }}
+    {{ with .chips }}<span class="chips">{{ range . }}<span class="chip">{{ . }}</span>{{ end }}</span>{{ end }}
+  </li>
+  {{- end }}
+</ol>
+
+{{- with .Params.fellowship }}
+<section class="fellow" aria-labelledby="h-fellow" id="fellowship">
+  <div>
+    <h2 class="mono-label" id="h-fellow">RAI Fellowship</h2>
+    <p class="big">{{ . }}</p>
+  </div>
+  <span class="tag">Upcoming</span>
+</section>
+{{- end }}
+
+{{- with .Params.talks }}
+<section class="sec" aria-labelledby="h-talks" id="talks">
+  <div class="sec-head"><h2 id="h-talks">Talks &amp; panels</h2></div>
+  {{- range $i, $t := . }}
+  <article class="talk{{ if modBool $i 2 | not }} flip{{ end }}{{ if $i }} rule{{ end }}">
+    <div class="photos{{ if eq (len $t.photos) 1 }} one{{ end }}">
+      {{- range $j, $p := $t.photos }}
+      <figure>
+        <img src="{{ $p.src | relURL }}" alt="{{ $p.alt }}" loading="lazy">
+        {{ if eq $j (sub (len $t.photos) 1) }}<figcaption>{{ $p.alt }}</figcaption>{{ end }}
+      </figure>
+      {{- end }}
+    </div>
+    <div>
+      <p class="kicker">{{ $t.kicker }}</p>
+      <h3>{{ $t.title }}</h3>
+      <p>{{ $t.text }}</p>
+      {{ with $t.link }}<p><a href="{{ .url | relURL }}">{{ .label }}</a></p>{{ end }}
+    </div>
+  </article>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- with .Params.newsletter }}
+<section class="sec rule" aria-labelledby="h-news" id="newsletter">
+  <div class="sec-head">
+    <h2 id="h-news">Policy &amp; Insights newsletter</h2>
+    <p class="mono-label">Monthly, with the Practising Lawyer's Institute</p>
+  </div>
+  <ol class="issues">
+    {{- range .issues }}
+    <li class="issue">
+      <p class="num"><b>{{ .num }}</b><span class="mono-label">{{ .month }}</span></p>
+      <a href="{{ .url | relURL }}"{{ if hasPrefix .url "http" }} rel="noopener"{{ end }}>{{ .title }}</a>
+      <span class="fmt">{{ .fmt }}</span>
+    </li>
+    {{- end }}
+  </ol>
+</section>
+{{- end }}
+{{ end }}
+
+{{ define "scripts" }}
+{{- $js := resources.Get "js/rai-graph.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" defer></script>
+{{ end }}

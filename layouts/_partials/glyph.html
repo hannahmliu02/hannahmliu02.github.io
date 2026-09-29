@@ -1,0 +1,13 @@
+{{- /* Field glyph: the ring of nine fields with spokes to the ones an item draws on.
+  Usage: partial "glyph.html" (dict "fields" (slice "comp" "law") "kind" "topic|project") */ -}}
+{{- $fields := .fields | default slice -}}
+{{- $kind := .kind | default "topic" -}}
+<svg class="glyph {{ $kind }}" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+  <circle class="ring" cx="22" cy="22" r="16"/>
+  {{- range site.Params.fields }}
+    {{- $on := in $fields .id }}
+    {{- if $on }}<line class="spoke" x1="22" y1="22" x2="{{ .gx }}" y2="{{ .gy }}"/>{{ end }}
+    <circle class="dot{{ if $on }} on{{ end }}" data-field="{{ .id }}" cx="{{ .gx }}" cy="{{ .gy }}" r="{{ if $on }}2.6{{ else }}1.5{{ end }}"/>
+  {{- end }}
+  <circle class="core" cx="22" cy="22" r="3"/>
+</svg>
