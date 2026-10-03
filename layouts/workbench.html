@@ -1,0 +1,80 @@
+{{ define "main" }}
+<section class="lock" id="lock">
+  <p class="eyebrow">{{ .Params.eyebrow | default "Private" }}</p>
+  <h1>{{ .Title }}</h1>
+  <p class="lede">This section is private. Enter the password to read it.</p>
+  <form id="unlock-form" class="unlock" autocomplete="off">
+    <label for="wb-password" class="mono-label">Password</label>
+    <div class="unlock-row">
+      <input id="wb-password" name="password" type="password" autocomplete="current-password" required>
+      <button type="submit" id="wb-submit">Unlock</button>
+    </div>
+    <label class="remember"><input type="checkbox" id="wb-remember"> Stay unlocked in this tab</label>
+    <p class="unlock-msg" id="wb-msg" role="status" aria-live="polite"></p>
+  </form>
+  <noscript><p class="lede small">This page needs JavaScript to decrypt its contents.</p></noscript>
+</section>
+
+<div id="workbench" hidden>
+  <header class="wb-head">
+    <div>
+      <p class="eyebrow">{{ .Params.eyebrow | default "Private" }}</p>
+      <h1 id="wb-title">{{ .Title }}</h1>
+      <p class="lede" id="wb-intro"></p>
+    </div>
+    <div class="wb-meta">
+      <p class="mono-label" id="wb-updated"></p>
+      <button type="button" class="theme-toggle" id="wb-lock">Lock</button>
+    </div>
+  </header>
+
+  <section class="wb-map rule" aria-labelledby="wb-map-h">
+    <div class="band-top">
+      <h2 class="mono-label" id="wb-map-h">How it connects</h2>
+      <div class="legend wb-status-legend" aria-hidden="true">
+        <span><i class="st active"></i>Active</span>
+        <span><i class="st planned"></i>Planned</span>
+        <span><i class="st paused"></i>Paused</span>
+        <span><i class="st done"></i>Done</span>
+      </div>
+    </div>
+    <div class="wb-layout">
+      <div class="wb-board" id="wb-board">
+        <svg class="wb-edges" id="wb-edges" aria-hidden="true"></svg>
+        <div class="wb-cols" id="wb-cols"></div>
+      </div>
+      <aside class="wb-detail" id="wb-detail" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section class="wp rule" id="packages" aria-labelledby="wp-h" hidden>
+    <div class="sec-head">
+      <h2 id="wp-h">PhD work packages</h2>
+      <p class="mono-label">Draft links · edit in private/workbench.yaml</p>
+    </div>
+    <p class="wp-intro" id="wp-intro"></p>
+    <div class="wp-layout">
+      <div class="wp-main">
+        <div class="graph-box wp-graph"><canvas class="wp-canvas" role="img" aria-label="A web of PhD work packages around a central PhD node. Each package branches into its possible projects, and curved links connect packages that share a thread. The same information appears in the panel beside the graph."></canvas></div>
+        <p class="wp-caption" aria-live="polite"></p>
+        <div class="legend wp-threads" aria-label="Highlight a thread"></div>
+      </div>
+      <aside class="wp-detail" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section class="list rule" aria-labelledby="wb-now-h">
+    <h2 id="wb-now-h">By status</h2>
+    <div class="wb-status" id="wb-status"></div>
+  </section>
+</div>
+
+<script id="wb-fields" type="application/json">{{ site.Params.fields | jsonify | safeJS }}</script>
+{{ end }}
+
+{{ define "scripts" }}
+{{- $wp := resources.Get "js/work-packages.js" | minify | fingerprint }}
+<script src="{{ $wp.RelPermalink }}" defer></script>
+{{- $js := resources.Get "js/workbench.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" data-src="{{ "workbench/data.enc.json" | relURL }}" id="wb-script" defer></script>
+{{ end }}

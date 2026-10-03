@@ -2,10 +2,19 @@
 {{- $areas := .Params.areas | default slice }}
 <section class="hero">
   <div class="hero-text">
-    {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
-    <h1>{{ .Params.headline | safeHTML }}</h1>
-    {{ with .Params.lede }}<p class="lede">{{ . }}</p>{{ end }}
-    {{ with .Params.lede_small }}<p class="lede small">{{ . }}</p>{{ end }}
+    {{- $name := .Params.name | default site.Title }}
+    <div class="hero-id">
+      {{- with .Params.photo }}{{ with resources.Get . }}
+        {{- $img := .Fill "400x400 Center q85 jpg" }}
+        <img class="hero-photo" src="{{ $img.RelPermalink }}" width="132" height="132" alt="Portrait of {{ $name }}">
+      {{- end }}{{ end }}
+      <div>
+        {{ with .Params.role }}<p class="eyebrow">{{ . }}</p>{{ end }}
+        <h1 class="hero-name">{{ $name }}</h1>
+      </div>
+    </div>
+    {{ with .Params.tagline }}<p class="hero-tagline">{{ . | safeHTML }}</p>{{ end }}
+    {{ with .Params.synopsis }}<div class="synopsis">{{ $.RenderString (dict "display" "block") . }}</div>{{ end }}
     <p class="hint">Hover or tap a field, a research area or a project to trace its connections. Select one to see where it comes up.</p>
   </div>
   <div class="graph-col">

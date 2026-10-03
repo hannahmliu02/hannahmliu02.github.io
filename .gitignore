@@ -67,3 +67,9 @@ Desktop.ini
 
 *.log
 npm-debug.log*
+
+# ============================================================================
+# Private workbench notes: plaintext never leaves this machine.
+# Only the encrypted static/workbench/data.enc.json is committed.
+# ============================================================================
+private/
