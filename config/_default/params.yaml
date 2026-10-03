@@ -20,9 +20,10 @@ links:
 # evenly spaced around the ring. If you add or remove a field, ask for these to be recomputed.
 # Other pages tag entries with these ids.
 fields:
+  # Policy and Computation sit opposite each other, so work that draws on both lands in the middle.
   - { id: phil,  name: Philosophy,        gx: 22.00, gy: 6.00 }
   - { id: pol,   name: Policy,            gx: 35.86, gy: 14.00 }
-  - { id: comp,  name: Computation,       gx: 35.86, gy: 30.00 }
+  - { id: cog,   name: Cognitive science, gx: 35.86, gy: 30.00 }
   - { id: neuro, name: Neuroscience,      gx: 22.00, gy: 38.00 }
-  - { id: cog,   name: Cognitive science, gx: 8.14,  gy: 30.00 }
+  - { id: comp,  name: Computation,       gx: 8.14,  gy: 30.00 }
   - { id: psych, name: Psychology,        gx: 8.14,  gy: 14.00 }
