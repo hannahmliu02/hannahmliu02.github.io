@@ -107,7 +107,7 @@ section.list > p { color: var(--muted); margin: 0 0 20px; max-width: 42em; }
 .glyph.project .core { fill: var(--accent); }
 
 /* ----- Home ----- */
-.hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 40px; align-items: center; padding-block: 24px 48px; }
+.hero { display: grid; grid-template-columns: minmax(0, 9fr) minmax(0, 13fr); gap: 40px; align-items: center; padding-block: 24px 48px; }
 .hero-text { min-width: 0; }
 .graph-col { min-width: 0; display: grid; gap: 12px; }
 .home-graph { aspect-ratio: 1 / 1; }
@@ -425,10 +425,10 @@ section.sec { padding-block: 48px 8px; scroll-margin-top: 24px; }
 .wp-overview li span { color: var(--muted); font-size: 13.5px; }
 
 /* ----- Home: name and photo first ----- */
-.hero-id { display: flex; align-items: center; gap: 22px; margin-bottom: 18px; }
-.hero-photo { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; flex: none; box-shadow: 0 0 0 1px var(--hair); }
+.hero-id { display: flex; align-items: center; gap: 20px; margin-bottom: 18px; }
+.hero-photo { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; flex: none; box-shadow: 0 0 0 1px var(--hair); }
 .hero-id .eyebrow { margin-bottom: 8px; }
-.hero-name { margin: 0; font-size: clamp(40px, 5.6vw, 64px); line-height: 1; }
+.hero-name { margin: 0; font-size: clamp(36px, 4.2vw, 54px); line-height: 1; white-space: nowrap; }
 .hero-tagline { font-family: var(--font-display); font-size: clamp(22px, 2.4vw, 28px); line-height: 1.25; margin: 0 0 18px; color: var(--fg); text-wrap: balance; }
 .hero-tagline em { font-style: italic; color: var(--accent); }
 .synopsis { max-width: 34em; }
@@ -439,26 +439,3 @@ section.sec { padding-block: 48px 8px; scroll-margin-top: 24px; }
   .hero-photo { width: 92px; height: 92px; }
 }
 
-/* ----- Home: name and synopsis on top, the web in its own full-width band ----- */
-.hero-top { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: center; padding-block: 32px 44px; }
-.hero-top .hero-id { margin-bottom: 0; }
-.hero-copy { min-width: 0; }
-.hero-copy .synopsis p:last-child { margin-bottom: 0; }
-.web { padding-block: 32px 8px; }
-.web-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; }
-.web-head h2 { font-family: var(--font-display); font-weight: 400; font-size: 30px; margin: 0; }
-.web-head .hint { margin: 0; max-width: 40em; }
-.home-graph { aspect-ratio: 3 / 2; max-height: 740px; margin-top: 8px; }
-.web-foot { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px 32px; }
-.web-foot .mentions { margin: 0; text-align: right; max-width: 34em; min-height: 3.2em; }
-.web-foot .mentions ul { justify-content: flex-end; }
-@media (max-width: 860px) {
-  .hero-top { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-}
-@media (max-width: 700px) {
-  .home-graph { aspect-ratio: 1 / 1; }
-  .web-foot { flex-direction: column; align-items: stretch; }
-  .web-foot .legend { justify-content: center; }
-  .web-foot .mentions { text-align: center; max-width: none; }
-  .web-foot .mentions ul { justify-content: center; }
-}
