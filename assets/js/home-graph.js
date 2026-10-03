@@ -1,4 +1,4 @@
-// Homepage graph: nine fields grow as fractal trees on a ring; research areas (gold) and RAI projects
+// Homepage graph: the fields grow as fractal trees on a ring; research areas (gold) and RAI projects
 // (navy diamonds) sit inside, linked to the fields they draw on. Hover to preview, click to pin a node
 // and list where it comes up on the site. Data comes from content/_index.md via #graph-data.
 (() => {
@@ -27,7 +27,10 @@
     nodes.push(n);
     return n;
   });
-  const LENS = [0.25, 0.155, 0.1];
+  // Branch size and spread scale with the number of fields, so fewer fields still fill the ring.
+  const SCALE = Math.min(1.5, 9 / FIELDS.length);
+  const LENS = [0.25, 0.155, 0.1].map(l => l * Math.pow(SCALE, 0.15));
+  const EXTENT = 1 + LENS.reduce((a, b) => a + b, 0) + 0.07;
   function grow(parent, ang, depth) {
     if (depth > 3) return;
     const len = LENS[depth - 1] * (0.85 + rand() * 0.3);
@@ -36,11 +39,11 @@
     nodes.push(n);
     parent.children.push(n);
     branchEdges.push({ a: parent, b: n, depth, field: parent.field });
-    const spread = 0.34 + rand() * 0.07;
+    const spread = (0.34 + rand() * 0.07) * Math.pow(SCALE, 0.6);
     grow(n, ang - spread + (rand() - .5) * .12, depth + 1);
     grow(n, ang + spread + (rand() - .5) * .12, depth + 1);
   }
-  hubs.forEach(h => [-0.36, 0, 0.36].forEach(d => grow(h, h.ang + d + (rand() - .5) * .08, 1)));
+  hubs.forEach(h => [-0.36, 0, 0.36].map(d => d * Math.pow(SCALE, 0.8)).forEach(d => grow(h, h.ang + d + (rand() - .5) * .08, 1)));
 
   // Dashed links between leaves of neighbouring fields that reach toward each other.
   const leaves = f => nodes.filter(n => n.field === f && n.depth === 3);
@@ -53,7 +56,7 @@
     let count = 0;
     for (const p of pairs) {
       if (count >= 2) break;
-      if (used.has(p.a) || used.has(p.b) || p.d > 0.5) continue;
+      if (used.has(p.a) || used.has(p.b) || p.d > 0.5 * SCALE) continue;
       used.add(p.a); used.add(p.b); count++;
       crossEdges.push({ a: p.a, b: p.b, fields: [h.field, next.field] });
     }
@@ -91,7 +94,7 @@
         if (d < minD) { n.x += dx / d * (minD - d) * 0.5; n.y += dy / d * (minD - d) * 0.5; }
       }
       n.x += (n.tx - n.x) * 0.02; n.y += (n.ty - n.y) * 0.02;
-      const r = Math.hypot(n.x, n.y), max = 0.64;
+      const r = Math.hypot(n.x, n.y), max = 0.72;
       if (r > max) { n.x *= max / r; n.y *= max / r; }
     }
   }
@@ -110,7 +113,7 @@
     W = r.width; H = r.height;
     canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    R = Math.min(W, H) / 2 / 1.56;
+    R = Math.min(W, H) / 2 / EXTENT;
     cx = W / 2; cy = H / 2;
     relaxLabels();
     if (!animating) draw(performance.now());
@@ -205,7 +208,7 @@
   }
   // Nudges research areas and projects (with their labels) off the field labels and each other.
   function relaxLabels() {
-    const S = sizes(), PAD = 4;
+    const S = sizes(), PAD = 7;
     ctx.font = `500 ${S.fs}px "IBM Plex Mono", ui-monospace, monospace`;
     const fixed = hubs.map(h => {
       const lx = cx + h.x * R - Math.cos(h.ang) * 20, ly = cy + h.y * R - Math.sin(h.ang) * 20;
@@ -229,7 +232,7 @@
       else m.n.dx += ((A.x0 + A.x1) < (B.x0 + B.x1) ? -1 : 1) * ox * share;
       return true;
     };
-    for (let it = 0; it < 150; it++) {
+    for (let it = 0; it < 300; it++) {
       let moved = false;
       for (const m of mov) for (const F of fixed) moved = push(m, rect(m), F, 0.6) || moved;
       for (let i = 0; i < mov.length; i++) for (let j = i + 1; j < mov.length; j++) {
@@ -237,9 +240,15 @@
         if (push(mov[i], A, B, 0.5)) { push(mov[j], B, A, 0.5); moved = true; }
       }
       for (const m of mov) { // stay inside the ring
-        const x = m.n.x * R + m.n.dx, y = m.n.y * R + m.n.dy, r = Math.hypot(x, y), max = R * 0.78;
+        const x = m.n.x * R + m.n.dx, y = m.n.y * R + m.n.dy, r = Math.hypot(x, y), max = R * 0.84;
         if (r > max) { m.n.dx = x * max / r - m.n.x * R; m.n.dy = y * max / r - m.n.y * R; }
       }
+      if (!moved) break;
+    }
+    // Final pass: field labels always win, even if that nudges two inner labels closer.
+    for (let it = 0; it < 40; it++) {
+      let moved = false;
+      for (const m of mov) for (const F of fixed) moved = push(m, rect(m), F, 1) || moved;
       if (!moved) break;
     }
   }

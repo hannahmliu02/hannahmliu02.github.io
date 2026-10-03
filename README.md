@@ -15,7 +15,7 @@ Then open http://localhost:1313. Pushing to `main` deploys to GitHub Pages (`.gi
 | To change | Edit |
 |---|---|
 | Homepage text, research areas, RAI projects, and the "where it comes up" links | `content/_index.md` |
-| The nine fields on the ring | `config/_default/params.yaml` (`fields`) |
+| The fields on the ring | `config/_default/params.yaml` (`fields`) |
 | Roles, projects, skills, awards | `content/experience.md` |
 | RAI page: projects, talks, newsletter | `content/responsible-ai-institute.md` |
 | Bio, interests, education, photo | `data/authors/me.yaml`, `assets/media/authors/me.png` |

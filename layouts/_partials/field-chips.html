@@ -1,4 +1,4 @@
-{{- /* Chips naming an item's fields, in ring order. Usage: partial "field-chips.html" (slice "comp" "law") */ -}}
+{{- /* Chips naming an item's fields, in ring order. Usage: partial "field-chips.html" (slice "comp" "pol") */ -}}
 {{- $ids := . -}}
 <span class="chips">
   {{- range site.Params.fields }}{{ if in $ids .id }}<span class="chip" data-field="{{ .id }}">{{ .name }}</span>{{ end }}{{ end -}}

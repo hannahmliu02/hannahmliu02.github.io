@@ -19,7 +19,7 @@
   </div>
   <div class="graph-col">
     <div class="graph-box home-graph">
-      <canvas id="graph" role="img" aria-label="A network diagram. Nine fields sit on a ring: {{ delimit (apply site.Params.fields "index" "." "name") ", " }}. Each branches outward like a fractal tree, and neighbouring branches link up. Inside the ring are research areas and Responsible AI Institute projects, each connected to the fields it draws on. The same areas and projects are listed below."></canvas>
+      <canvas id="graph" role="img" aria-label="A network diagram. {{ len site.Params.fields }} fields sit on a ring: {{ delimit (apply site.Params.fields "index" "." "name") ", " }}. Each branches outward like a fractal tree, and neighbouring branches link up. Inside the ring are research areas and Responsible AI Institute projects, each connected to the fields it draws on. The same areas and projects are listed below."></canvas>
     </div>
     <div class="legend" id="legend" aria-label="Highlight a group">
       <button type="button" id="lg-field" data-group="field"><span class="mk field"></span>Fields</button>
@@ -40,7 +40,7 @@
 
 <section class="list" aria-labelledby="h-rai">
   <h2 id="h-rai">At the Responsible AI Institute</h2>
-  <p>Applied governance work, where law, policy and economics meet computation. In the graph, these are the navy diamonds.</p>
+  <p>Applied governance work, where policy meets computation and philosophy. In the graph, these are the navy diamonds.</p>
   <ul class="items three" id="projects">
     {{- range $i, $a := $areas }}{{ if eq $a.kind "project" }}{{ partial "home-item.html" (dict "a" $a "i" $i) }}{{ end }}{{ end }}
   </ul>

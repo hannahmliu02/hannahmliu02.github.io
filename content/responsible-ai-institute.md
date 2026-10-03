@@ -17,21 +17,21 @@ projects:
   - id: arc
     step: ARC · Risk classification
     title: TrustX Agent Risk Classification (ARC)
-    fields: [law, pol, comp]
+    fields: [pol, comp]
     text: ARC is a structured, iterable framework that provides risk classification for 7 agentic AI system types. It is grounded in established frameworks, such as the NIST AI RMF, the EU AI Act, ISO/IEC 42001, OWASP, MITRE ATLAS, and SR 11-7/26-2. Its outputs will then inform mapped control recommendations in RAI's policy generator tool.
     link: { label: Working paper (PDF), url: /uploads/arc_working.pdf }
     chips: [7 system types, 12 risk dimensions]
   - id: trustx
     step: TrustX · Builds off ARC
     title: TrustX Expanded Risk Framework
-    fields: [econ, law, pol]
+    fields: [pol, phil]
     text: The expanded framework builds off of ARC by including procurement risk and exposure risk to legacy systems. It maintains the 12-risk dimension core introduced in ARC and tailors the risk classification to each risk surface with additional components, such as a procurement dossier or an agentic threat testing layer.
     link: { label: Working paper (PDF), url: /uploads/trustx_expanded_working.pdf }
     chips: [Procurement risk, Legacy exposure]
   - id: roar
     step: ROAR · Maps to TrustX
     title: RAI Open AI Registry (ROAR)
-    fields: [pol, comp, econ]
+    fields: [pol, comp, psych]
     text: A component of our launch of the TrustX for Finance Working Group was the introduction of ROAR, which allows individuals to contribute to an open source platform that shows how their AI applications map to our TrustX risk framework. This is a part of RAI's goals to create a collective core of iterative feedback within the AI governance community.
     link: { label: "Sneak peek on the working group's site", url: "https://www.responsible.ai/trustx-finance/" }
     chips: [Open source, TrustX for Finance]

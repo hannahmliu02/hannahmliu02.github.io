@@ -95,7 +95,7 @@ section.list { padding-block: 40px 16px; }
 section.list > h2, .sec-head h2 { font-family: var(--font-display); font-weight: 400; font-size: 30px; margin: 0 0 6px; text-wrap: balance; }
 section.list > p { color: var(--muted); margin: 0 0 20px; max-width: 42em; }
 
-/* Field glyph: a tiny ring of the nine fields, with spokes to the ones an item uses. */
+/* Field glyph: a tiny ring of the fields, with spokes to the ones an item uses. */
 .glyph { width: 44px; height: 44px; display: block; margin-top: 2px; flex: none; }
 .glyph .ring { fill: none; stroke: var(--line); stroke-opacity: .45; }
 .glyph .dot { fill: var(--line); }
@@ -157,7 +157,7 @@ section.list > p { color: var(--muted); margin: 0 0 20px; max-width: 42em; }
 .filter-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; margin-bottom: 12px; }
 .filter .label { font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--fg); margin: 0; font-weight: 500; }
 .filter .status { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); letter-spacing: .04em; margin: 0; }
-.fields { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); gap: 8px; }
+.fields { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 8px; }
 .fields button {
   width: 100%; height: 100%; text-align: left; font: inherit; color: var(--muted); cursor: pointer;
   background: none; border: 1px solid color-mix(in srgb, var(--line) 45%, transparent); border-radius: 4px;

@@ -1,5 +1,5 @@
-{{- /* Field glyph: the ring of nine fields with spokes to the ones an item draws on.
-  Usage: partial "glyph.html" (dict "fields" (slice "comp" "law") "kind" "topic|project") */ -}}
+{{- /* Field glyph: the ring of fields with spokes to the ones an item draws on.
+  Usage: partial "glyph.html" (dict "fields" (slice "comp" "pol") "kind" "topic|project") */ -}}
 {{- $fields := .fields | default slice -}}
 {{- $kind := .kind | default "topic" -}}
 <svg class="glyph {{ $kind }}" viewBox="0 0 44 44" aria-hidden="true" focusable="false">

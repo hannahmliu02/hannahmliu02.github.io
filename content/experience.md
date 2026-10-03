@@ -3,7 +3,7 @@ title: "What I've Been Up To"
 slug: what-ive-been-up-to
 layout: experience
 eyebrow: Roles and projects
-intro: My current roles and past research projects. Each one draws on a few of the nine fields I work across. Pick a field to see where it shows up.
+intro: My current roles and past research projects. Each one draws on a few of the fields I work across. Pick a field to see where it shows up.
 
 # Each entry gets its own link (/what-ive-been-up-to/#id), which the homepage graph uses.
 # `kind: applied` draws a navy diamond (RAI work); anything else is a gold research node.
@@ -16,7 +16,7 @@ groups:
         org: University of Cambridge
         dates: Oct 2025 to present
         text: Analysing the effects of fine-tuning methodologies on AI bias guardrails in LLMs, in collaboration with **Noah Broestl**, under the supervision of **Dr. Umang Bhatt**.
-        fields: [comp, ling, phil]
+        fields: [comp, phil]
         related: [measuring-model-bias]
 
       - id: rai
@@ -25,7 +25,7 @@ groups:
         org: Responsible AI Institute
         dates: Jan 2026 to present
         text: Building the theoretical and technical foundations for AI governance mechanisms, such as a risk classification and policy generation framework for agentic AI systems. [More on the RAI page.](/responsible-ai-institute/)
-        fields: [law, pol, econ, comp]
+        fields: [pol, comp]
         related: [arc, trustx, roar, decentralised-ai-governance]
 
   - title: Research projects
@@ -36,7 +36,7 @@ groups:
         org: "Master's dissertation · TRACE Lab, Cambridge"
         dates: May 2026 to present
         text: Testing the effectiveness of LoRA and OFT on eroding pre-programmed AI bias guardrails in LLMs. Aiming to develop a practical recommendation and theorem that industry and academic stakeholders can use to determine how much fine-tuning data they need to eliminate bias guardrails in their specific use case. In collaboration with the TRACE Lab at the University of Cambridge.
-        fields: [comp, ling, phil, pol]
+        fields: [comp, phil, pol]
         related: [measuring-model-bias]
 
       - id: clinical-prediction
@@ -57,7 +57,7 @@ groups:
         links:
           - { label: "Poster and oral presentation, Penn NRCP 2025", url: /uploads/nrcp.pdf }
           - { label: Work-in-progress manuscript, url: /uploads/chi2026.pdf }
-        fields: [comp, psych, law]
+        fields: [comp, psych]
         related: [measuring-model-bias, fairness-for-underrepresented-groups]
 
       - id: forecasters
@@ -67,7 +67,7 @@ groups:
         text: Applied correlational analysis to identify the traits and behaviours most associated with successful forecasters in a forecasting tournament.
         links:
           - { label: "Poster presentation, CURF Research Expo 2023", url: /uploads/hpt.pdf }
-        fields: [psych, cog, econ]
+        fields: [psych, cog]
         related: [human-and-machine-cognition]
 
       - id: dyspnea
