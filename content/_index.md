@@ -5,14 +5,13 @@ title: Hannah Liu
 # Your name and photo come first, then the role line, tagline and synopsis.
 name: Hannah Liu                    # shown as the big heading
 photo: media/authors/me.png         # a file inside assets/ (swap the image there to change it)
-role: AI governance researcher      # small line above your name
-tagline: Working where the <em>disciplines meet</em>   # <em> sets words in italic navy
+role: AI Governance Researcher      # small line above your name
 # Synopsis: write it in Markdown. Leave a blank line between paragraphs.
 # The first paragraph is shown larger; later paragraphs are smaller and grey.
 synopsis: |
-  I study how AI should be governed, drawing on nine fields, from cognitive science and computation to law and economics.
+  I study how AI should be governed, working where the disciplines meet.
 
-  My research looks at governance frameworks that are decentralised, ethically sound and work across the world, and at how AI can enter society without harming underrepresented people. At the Responsible AI Institute, I turn that thinking into practical tools, like risk frameworks for agentic AI and an open registry of AI applications.
+  My research looks at governance frameworks that are decentralised, ethically sound and globally applicable, and at how AI can enter society without harming underrepresented people. At the Responsible AI Institute, I turn that thinking into practical tools, like risk frameworks for agentic AI and an open registry of AI applications.
 
 # Research areas (gold nodes) and Responsible AI Institute projects (navy diamonds).
 # `fields` use the ids in config/_default/params.yaml.
