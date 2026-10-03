@@ -1,26 +1,32 @@
 {{ define "main" }}
 {{- $areas := .Params.areas | default slice }}
-<section class="hero">
-  <div class="hero-text">
-    {{- $name := .Params.name | default site.Title }}
-    <div class="hero-id">
-      {{- with .Params.photo }}{{ with resources.Get . }}
-        {{- $img := .Fill "400x400 Center q85 jpg" }}
-        <img class="hero-photo" src="{{ $img.RelPermalink }}" width="132" height="132" alt="Portrait of {{ $name }}">
-      {{- end }}{{ end }}
-      <div>
-        {{ with .Params.role }}<p class="eyebrow">{{ . }}</p>{{ end }}
-        <h1 class="hero-name">{{ $name }}</h1>
-      </div>
+<section class="hero hero-top">
+  {{- $name := .Params.name | default site.Title }}
+  <div class="hero-id">
+    {{- with .Params.photo }}{{ with resources.Get . }}
+      {{- $img := .Fill "400x400 Center q85 jpg" }}
+      <img class="hero-photo" src="{{ $img.RelPermalink }}" width="132" height="132" alt="Portrait of {{ $name }}">
+    {{- end }}{{ end }}
+    <div>
+      {{ with .Params.role }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      <h1 class="hero-name">{{ $name }}</h1>
     </div>
+  </div>
+  <div class="hero-copy">
     {{ with .Params.tagline }}<p class="hero-tagline">{{ . | safeHTML }}</p>{{ end }}
     {{ with .Params.synopsis }}<div class="synopsis">{{ $.RenderString (dict "display" "block") . }}</div>{{ end }}
+  </div>
+</section>
+
+<section class="web rule" aria-labelledby="h-web">
+  <div class="web-head">
+    <h2 id="h-web">How my work connects</h2>
     <p class="hint">Hover or tap a field, a research area or a project to trace its connections. Select one to see where it comes up.</p>
   </div>
-  <div class="graph-col">
-    <div class="graph-box home-graph">
-      <canvas id="graph" role="img" aria-label="A network diagram. {{ len site.Params.fields }} fields sit on a ring: {{ delimit (apply site.Params.fields "index" "." "name") ", " }}. Each branches outward like a fractal tree, and neighbouring branches link up. Inside the ring are research areas and Responsible AI Institute projects, each connected to the fields it draws on. The same areas and projects are listed below."></canvas>
-    </div>
+  <div class="graph-box home-graph">
+    <canvas id="graph" role="img" aria-label="A network diagram. {{ len site.Params.fields }} fields sit on an oval: {{ delimit (apply site.Params.fields "index" "." "name") ", " }}. Each branches outward like a fractal tree, and neighbouring branches link up. Inside are research areas and Responsible AI Institute projects, each connected to the fields it draws on. The same areas and projects are listed below."></canvas>
+  </div>
+  <div class="web-foot">
     <div class="legend" id="legend" aria-label="Highlight a group">
       <button type="button" id="lg-field" data-group="field"><span class="mk field"></span>Fields</button>
       <button type="button" id="lg-topic" data-group="topic"><span class="mk topic"></span>Research areas</button>

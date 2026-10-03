@@ -438,3 +438,27 @@ section.sec { padding-block: 48px 8px; scroll-margin-top: 24px; }
   .hero-id { gap: 16px; }
   .hero-photo { width: 92px; height: 92px; }
 }
+
+/* ----- Home: name and synopsis on top, the web in its own full-width band ----- */
+.hero-top { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); align-items: center; padding-block: 32px 44px; }
+.hero-top .hero-id { margin-bottom: 0; }
+.hero-copy { min-width: 0; }
+.hero-copy .synopsis p:last-child { margin-bottom: 0; }
+.web { padding-block: 32px 8px; }
+.web-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; }
+.web-head h2 { font-family: var(--font-display); font-weight: 400; font-size: 30px; margin: 0; }
+.web-head .hint { margin: 0; max-width: 40em; }
+.home-graph { aspect-ratio: 3 / 2; max-height: 740px; margin-top: 8px; }
+.web-foot { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px 32px; }
+.web-foot .mentions { margin: 0; text-align: right; max-width: 34em; min-height: 3.2em; }
+.web-foot .mentions ul { justify-content: flex-end; }
+@media (max-width: 860px) {
+  .hero-top { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}
+@media (max-width: 700px) {
+  .home-graph { aspect-ratio: 1 / 1; }
+  .web-foot { flex-direction: column; align-items: stretch; }
+  .web-foot .legend { justify-content: center; }
+  .web-foot .mentions { text-align: center; max-width: none; }
+  .web-foot .mentions ul { justify-content: center; }
+}

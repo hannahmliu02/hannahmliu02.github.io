@@ -24,6 +24,7 @@
   const hubs = FIELDS.map((f, i) => {
     const a = -Math.PI / 2 + i * STEP;
     const n = { kind: "hub", field: f.id, name: f.name, x: Math.cos(a), y: Math.sin(a), ang: a, depth: 0, children: [] };
+    n.hub = n;
     nodes.push(n);
     return n;
   });
@@ -34,7 +35,7 @@
   function grow(parent, ang, depth) {
     if (depth > 3) return;
     const len = LENS[depth - 1] * (0.85 + rand() * 0.3);
-    const n = { kind: "twig", field: parent.field, depth, children: [],
+    const n = { kind: "twig", field: parent.field, hub: parent.hub, depth, children: [],
       x: parent.x + Math.cos(ang) * len, y: parent.y + Math.sin(ang) * len };
     nodes.push(n);
     parent.children.push(n);
@@ -105,7 +106,10 @@
   });
 
   // ----- Sizing -----
-  let W = 0, H = 0, R = 0, cx = 0, cy = 0;
+  let W = 0, H = 0, R = 0, cx = 0, cy = 0, SX = 1;
+  // Horizontal stretch: hubs and research areas spread into an oval on wide canvases.
+  // Trees keep their shape; only their roots move. ux() is a node's stretched x in ring units.
+  const ux = n => (n.hub ? n.hub.x * SX + (n.x - n.hub.x) : n.x * SX);
   let animating = false;
   function resize() {
     const r = canvas.getBoundingClientRect();
@@ -113,7 +117,9 @@
     W = r.width; H = r.height;
     canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    R = Math.min(W, H) / 2 / EXTENT;
+    R = H / 2 / EXTENT;
+    SX = Math.max(1, Math.min(1.55, W / 2 / R - (EXTENT - 1) - 0.04));
+    if (W / 2 < (SX + EXTENT - 1) * R) { R = W / 2 / EXTENT; SX = 1; }
     cx = W / 2; cy = H / 2;
     relaxLabels();
     if (!animating) draw(performance.now());
@@ -169,7 +175,7 @@
   function place(now) {
     const t = now / 1000, still = reduce.matches;
     for (const n of nodes) {
-      n.px = cx + n.x * R + (n.dx || 0) + (still ? 0 : Math.sin(t * n.w + n.phase) * n.amp);
+      n.px = cx + ux(n) * R + (n.dx || 0) + (still ? 0 : Math.sin(t * n.w + n.phase) * n.amp);
       n.py = cy + n.y * R + (n.dy || 0) + (still ? 0 : Math.cos(t * n.w * 0.83 + n.phase * 1.3) * n.amp);
     }
   }
@@ -186,12 +192,15 @@
   const hubLabelPos = h => [h.px - Math.cos(h.ang) * 20, h.py - Math.sin(h.ang) * 20];
 
   // ----- Label sizes and pixel-space collision pass -----
-  const sizes = () => ({
-    fs: Math.max(9, Math.min(10.5, R / 18)),
-    tfs: Math.max(11.5, Math.min(15, R / 13)),
-    pfs: Math.max(9.5, Math.min(11, R / 17)),
-    wrap: Math.max(R * 0.6, 88),
-  });
+  const sizes = () => {
+    const Rf = R * Math.min(SX, 1.25); // wider ovals have room for larger labels
+    return {
+    fs: Math.max(9, Math.min(11, Rf / 18)),
+    tfs: Math.max(11.5, Math.min(16, Rf / 13)),
+    pfs: Math.max(9.5, Math.min(11.5, Rf / 17)),
+    wrap: Math.max(R * 0.7 * Math.min(SX, 1.3), 88),
+    };
+  };
   // On small screens there is no room for every label: inner labels show only for the selected node.
   const compact = () => R < 150;
   const showLabel = n => !compact() || (active && active.type === "inner" && active.index === n.index);
@@ -211,17 +220,17 @@
     const S = sizes(), PAD = 7;
     ctx.font = `500 ${S.fs}px "IBM Plex Mono", ui-monospace, monospace`;
     const fixed = hubs.map(h => {
-      const lx = cx + h.x * R - Math.cos(h.ang) * 20, ly = cy + h.y * R - Math.sin(h.ang) * 20;
+      const lx = cx + ux(h) * R - Math.cos(h.ang) * 20, ly = cy + h.y * R - Math.sin(h.ang) * 20;
       const lines = h.name.toUpperCase().split(" ");
       const w = Math.max(...lines.map(l => ctx.measureText(l).width));
       const hh = lines.length * S.fs * 1.2;
-      const x0 = Math.min(lx - w / 2, cx + h.x * R - 7), x1 = Math.max(lx + w / 2, cx + h.x * R + 7);
+      const x0 = Math.min(lx - w / 2, cx + ux(h) * R - 7), x1 = Math.max(lx + w / 2, cx + ux(h) * R + 7);
       const y0 = Math.min(ly - hh / 2, cy + h.y * R - 7), y1 = Math.max(ly + hh / 2, cy + h.y * R + 7);
       return { x0, x1, y0, y1 };
     });
     const mov = innerNodes.map(n => { n.dx = 0; n.dy = 0; return { n, b: innerBox(n, S) }; });
     const rect = m => {
-      const x = cx + m.n.x * R + m.n.dx, y = cy + m.n.y * R + m.n.dy;
+      const x = cx + ux(m.n) * R + m.n.dx, y = cy + m.n.y * R + m.n.dy;
       return { x0: x - m.b.w / 2 - PAD, x1: x + m.b.w / 2 + PAD, y0: y + m.b.top - PAD, y1: y + m.b.bottom + PAD };
     };
     const overlap = (A, B) => [Math.min(A.x1, B.x1) - Math.max(A.x0, B.x0), Math.min(A.y1, B.y1) - Math.max(A.y0, B.y0)];
@@ -240,8 +249,9 @@
         if (push(mov[i], A, B, 0.5)) { push(mov[j], B, A, 0.5); moved = true; }
       }
       for (const m of mov) { // stay inside the ring
-        const x = m.n.x * R + m.n.dx, y = m.n.y * R + m.n.dy, r = Math.hypot(x, y), max = R * 0.84;
-        if (r > max) { m.n.dx = x * max / r - m.n.x * R; m.n.dy = y * max / r - m.n.y * R; }
+        const x = ux(m.n) * R + m.n.dx, y = m.n.y * R + m.n.dy, ex = R * 0.84 * SX, ey = R * 0.84;
+        const k = Math.hypot(x / ex, y / ey);
+        if (k > 1) { m.n.dx = x / k - ux(m.n) * R; m.n.dy = y / k - m.n.y * R; }
       }
       if (!moved) break;
     }
@@ -294,7 +304,7 @@
       if (k <= 0) continue;
       const on = fieldOn(e.field);
       ctx.lineWidth = 1.6 - e.depth * 0.35;
-      withAlpha(on && active ? C.accent : C.line, (0.95 - e.depth * 0.18) * dim(on));
+      withAlpha(on && active ? C.accent : C.line, (active ? 0.95 - e.depth * 0.18 : 0.62 - e.depth * 0.13) * dim(on));
       ctx.beginPath();
       ctx.moveTo(e.a.px, e.a.py);
       ctx.lineTo(e.a.px + (e.b.px - e.a.px) * k, e.a.py + (e.b.py - e.a.py) * k);
@@ -305,7 +315,7 @@
     if (tk > 0) for (const e of innerEdges) {
       const on = edgeOn(e);
       ctx.lineWidth = on && active ? 1.4 : 1;
-      withAlpha(edgeColor(e), (active ? 0.9 : 0.4) * tk * dim(on));
+      withAlpha(edgeColor(e), (active ? 0.9 : 0.24) * tk * dim(on));
       ctx.beginPath();
       const steps = 24;
       for (let i = 0; i <= steps * tk; i++) {
@@ -316,7 +326,7 @@
     }
 
     if (!reduce.matches && g >= 1) {
-      if (now - lastSpawn > 1100) { spawnPulse(now); lastSpawn = now; }
+      if (now - lastSpawn > 1800) { spawnPulse(now); lastSpawn = now; }
       for (let i = pulses.length - 1; i >= 0; i--) {
         const p = pulses[i], s = (now - p.start) / p.dur;
         if (s >= 1) { pulses.splice(i, 1); continue; }
@@ -335,8 +345,8 @@
     for (const n of nodes) {
       if (n.kind !== "twig" || grown - (n.depth - 1) < 1) continue;
       const on = fieldOn(n.field);
-      withAlpha(on && active ? C.accent : C.line, dim(on));
-      ctx.beginPath(); ctx.arc(n.px, n.py, 2.6 - n.depth * 0.5, 0, Math.PI * 2); ctx.fill();
+      withAlpha(on && active ? C.accent : C.line, (active ? 1 : 0.6) * dim(on));
+      ctx.beginPath(); ctx.arc(n.px, n.py, 2.4 - n.depth * 0.5, 0, Math.PI * 2); ctx.fill();
     }
 
     const S = sizes(), fs = S.fs;
