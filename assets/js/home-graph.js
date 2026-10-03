@@ -255,10 +255,22 @@
       }
       if (!moved) break;
     }
-    // Final pass: field labels always win, even if that nudges two inner labels closer.
-    for (let it = 0; it < 40; it++) {
+    // Final pass: field labels always win, and inner labels finish separating from each other.
+    // The ring limit is relaxed here (only the canvas edge applies), so nothing is pinned in place.
+    for (let it = 0; it < 300; it++) {
       let moved = false;
+      for (let i = 0; i < mov.length; i++) for (let j = i + 1; j < mov.length; j++) {
+        const A = rect(mov[i]), B = rect(mov[j]);
+        if (push(mov[i], A, B, 0.5)) { push(mov[j], B, A, 0.5); moved = true; }
+      }
       for (const m of mov) for (const F of fixed) moved = push(m, rect(m), F, 1) || moved;
+      for (const m of mov) {
+        const B = rect(m);
+        if (B.x0 < 2) m.n.dx += 2 - B.x0;
+        if (B.x1 > W - 2) m.n.dx -= B.x1 - (W - 2);
+        if (B.y0 < 2) m.n.dy += 2 - B.y0;
+        if (B.y1 > H - 2) m.n.dy -= B.y1 - (H - 2);
+      }
       if (!moved) break;
     }
   }

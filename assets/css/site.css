@@ -439,3 +439,13 @@ section.sec { padding-block: 48px 8px; scroll-margin-top: 24px; }
   .hero-photo { width: 92px; height: 92px; }
 }
 
+
+/* ----- Home: let the web run into the right-hand page margin on wide screens ----- */
+/* --bleed is the empty space to the right of the 1120px content column (none on smaller screens). */
+html { overflow-x: clip; }
+.hero .graph-col { --bleed: clamp(0px, calc((100vw - 1120px) / 2 - 24px), 200px); }
+.hero .home-graph { aspect-ratio: 9 / 8; width: auto; max-width: none; margin-right: calc(-1 * var(--bleed)); }
+@media (max-width: 860px) {
+  .hero .graph-col { --bleed: 0px; }
+  .hero .home-graph { aspect-ratio: 1 / 1; }
+}
