@@ -309,3 +309,6 @@ section.sec { padding-block: 48px 8px; scroll-margin-top: 24px; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* Linked-to entries take focus on arrival; their :target highlight replaces the focus ring. */
+.item:focus, .entry:focus, .col:focus { outline: none; }
